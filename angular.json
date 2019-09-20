@@ -38,6 +38,31 @@
                                 "glob": "favicon.ico",
                                 "input": "packages/docs/src",
                                 "output": "/"
+                            },
+                            {
+                                "glob": "mc-icons.woff",
+                                "input": "node_modules/@ptsecurity/mosaic-icons/dist/fonts/",
+                                "output": "/assets/fonts"
+                            },
+                            {
+                                "glob": "mc-icons.woff",
+                                "input": "node_modules/@ptsecurity/mosaic-icons/dist/fonts/",
+                                "output": "/app/shared/stackblitz"
+                            },
+                            {
+                                "glob": "mc-icons.woff",
+                                "input": "node_modules/@ptsecurity/mosaic-icons/dist/fonts/",
+                                "output": "/app/shared/stackblitz/assets"
+                            },
+                            {
+                                "glob": "mc-icons.woff",
+                                "input": "node_modules/@ptsecurity/mosaic-icons/dist/fonts/",
+                                "output": "/assets/stackblitz/assets"
+                            },
+                            {
+                                "glob": "mc-icons.woff",
+                                "input": "node_modules/@ptsecurity/mosaic-icons/dist/fonts/",
+                                "output": "/assets/stackblitz"
                             }
                         ],
                         "styles": [
