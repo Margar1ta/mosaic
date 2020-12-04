@@ -17,14 +17,14 @@ async function cleanupDocsPreviews() {
 
     const q = 'repo:positive-js/mosaic is:pr is:closed';
 
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     const { data }: { data: { items: any[] } } = await octokit.search.issuesAndPullRequests({
         q,
         per_page: 100
     });
 
     const prsToRemove = data.items.reduce(
-        // tslint:disable-next-line:no-reserved-keywords
+        // eslint-disable-next-line 
         (prev: string[], curr: { number: number }) => {
             prev.push(`pr${curr.number}*`);
 
@@ -33,12 +33,12 @@ async function cleanupDocsPreviews() {
         []
     );
 
-    // tslint:disable-next-line:no-console
+    // eslint-disable-next-line no-console
     console.log('PRs to remove: ', prsToRemove);
 
     execSync(`rm -rf "${repoDir}"`);
     execSync(`mkdir -p "${repoDir}"`);
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     await process.chdir(`${repoDir}`);
 
     execSync(`git init`);
@@ -55,7 +55,7 @@ async function cleanupDocsPreviews() {
         execSync(
             `git commit -m "chore: cleanup doc preview for closed pull requests"`
         );
-        // tslint:disable-next-line:no-empty
+        // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     } catch (e) {}
 
     execSync(`git push origin master --force-with-lease`);

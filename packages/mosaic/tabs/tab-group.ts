@@ -81,10 +81,10 @@ export const MC_TABS_CONFIG = new InjectionToken<string>('MC_TABS_CONFIG');
 // Boilerplate for applying mixins to McTabGroup.
 /** @docs-private */
 export class McTabGroupBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) { }
 }
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McTabGroupMixinBase: CanColorCtor & typeof McTabGroupBase = mixinColor(mixinDisabled(McTabGroupBase));
 
 /**

@@ -3,7 +3,7 @@ import { ElementRef } from '@angular/core';
 import { Constructor } from './constructor';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export interface CanColor {
     color: ThemePalette;
 }
@@ -11,7 +11,7 @@ export interface CanColor {
 /** @docs-private */
 export type CanColorCtor = Constructor<CanColor>;
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export interface HasElementRef {
     _elementRef: ElementRef;
 }

@@ -7,8 +7,8 @@ import { MC_CHECKBOX_CLICK_ACTION } from './checkbox-config';
 import { McCheckbox, McCheckboxChange, McCheckboxModule } from './index';
 
 
-// tslint:disable no-empty
-// tslint:disable no-magic-numbers
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
+/* eslint-disable no-magic-numbers */
 describe('McCheckbox', () => {
     let fixture: ComponentFixture<any>;
 

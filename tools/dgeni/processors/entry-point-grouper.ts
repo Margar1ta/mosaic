@@ -10,7 +10,7 @@ import { isDeprecatedDoc, isPrimaryModuleDoc } from '../common/decorators';
 import { CategorizedClassDoc } from '../common/dgeni-definitions';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface ModuleInfo {
     /** Name of the module (e.g. toolbar, drag-drop, ripple) */
     name: string;
@@ -98,7 +98,7 @@ export class EntryPointGrouper implements Processor {
             const packageDisplayName = packageName === 'cdk' ? 'CDK' : 'Mosaic';
 
             const moduleImportPath = `@angular/${packageName}/${moduleInfo.entryPointName}`;
-            // tslint:disable-next-line:prefer-template
+            // eslint-disable-next-line prefer-template
             const entryPointName = packageName + '-' + moduleInfo.name;
 
             // Compute a public URL that refers to the document. This is helpful if we want to
@@ -184,7 +184,7 @@ function getModulePackageInfo(doc: Document): ModuleInfo {
     // The ripples are technically part of the `@angular/material/core` entry-point, but we
     // want to show the ripple API separately in the docs. In order to archive this, we treat
     // the ripple folder as its own module.
-    // tslint:disable-next-line:no-magic-numbers
+    // eslint-disable-next-line no-magic-numbers
     if (pathSegments[1] === 'core' && pathSegments[2] === 'ripple') {
         moduleName = 'ripple';
     }

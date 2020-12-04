@@ -122,10 +122,10 @@ export async function createTestCaseSetup(
     // files won't be part of the program and cannot be migrated.
     testAppTsconfig.include.push('src/**/*.ts');
 
-    // tslint:disable-next-line:no-magic-numbers no-null-keyword
+    // eslint-disable-next-line no-magic-numbers, no-null/no-null
     writeFile(testAppTsconfigPath, JSON.stringify(testAppTsconfig, null, 4));
 
-    // tslint:disable-next-line:only-arrow-functions no-function-expression
+    // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
     const runFixers = async function(): Promise<{ logOutput: string }> {
         // Switch to the new temporary directory to simulate that "ng update" is ran
         // from within the project.
@@ -148,10 +148,10 @@ export async function createTestCaseSetup(
  * type checking within migration rules is not working as in real applications.
  */
 function patchTypeScriptDefaultLib(tree: Tree): void {
-    // tslint:disable-next-line: no-unbound-method
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     const originalRead = tree.read;
 
-    // tslint:disable-next-line: no-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     tree.read = function(filePath: string): Buffer | any {
         // In case a file within the TypeScript package is requested, we read the file from
         // the real file system. This is necessary because within unit tests, the "typeScript"

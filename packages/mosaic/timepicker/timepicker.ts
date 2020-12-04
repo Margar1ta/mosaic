@@ -360,7 +360,7 @@ export class McTimepicker<D> implements McFormFieldControl<D>, OnDestroy, Contro
     }
 
     onKeyDown(event: KeyboardEvent): void {
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         const keyCode = event.keyCode;
 
         if (hasModifierKey(event)) {
@@ -584,7 +584,7 @@ export class McTimepicker<D> implements McFormFieldControl<D>, OnDestroy, Contro
         let minutes: number = 0;
         let seconds: number = 0;
 
-        // tslint:disable:no-magic-numbers
+        /* eslint-disable no-magic-numbers */
         if (hoursAndMinutesInAmPm) {
             hours = Number(hoursAndMinutesInAmPm[1]);
             minutes = Number(hoursAndMinutesInAmPm[2]);
@@ -604,7 +604,7 @@ export class McTimepicker<D> implements McFormFieldControl<D>, OnDestroy, Contro
         } else {
             return null;
         }
-        // tslint:enable
+        /* eslint-enable */
 
         const resultDate = this.dateAdapter.createDateTime(
             this.dateAdapter.getYear(this.value),
@@ -668,6 +668,6 @@ export class McTimepicker<D> implements McFormFieldControl<D>, OnDestroy, Contro
         }
     }
 
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     private validatorOnChange = () => {};
 }

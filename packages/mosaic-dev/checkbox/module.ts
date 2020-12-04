@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { McCheckboxModule } from '../../mosaic/checkbox';
 
 
-/* tslint:disable:no-trailing-whitespace */
+/* eslint-disable no-trailing-spaces */
 @Component({
     selector: 'app',
     styleUrls: ['../main.scss'],

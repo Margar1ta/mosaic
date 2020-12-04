@@ -34,11 +34,11 @@ import { McSuffix } from './suffix';
 let nextUniqueId = 0;
 
 export class McFormFieldBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McFormFieldMixinBase: CanColorCtor & typeof McFormFieldBase = mixinColor(McFormFieldBase);
 
 @Component({
@@ -133,7 +133,7 @@ export class McFormField extends McFormFieldMixinBase implements
         return this.control && !this.disabled && (this.control.focused || this.hovered);
     }
 
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef, private _changeDetectorRef: ChangeDetectorRef) {
         super(_elementRef);
     }
@@ -193,7 +193,7 @@ export class McFormField extends McFormFieldMixinBase implements
     }
 
     onKeyDown(event: KeyboardEvent): void {
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         if (this.canCleanerClearByEsc && event.keyCode === ESCAPE && this.control.focused && this.hasCleaner) {
             if (this.control && this.control.ngControl) {
                 this.control.ngControl.reset();

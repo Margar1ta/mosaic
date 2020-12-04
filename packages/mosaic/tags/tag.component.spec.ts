@@ -1,4 +1,4 @@
-/* tslint:disable:no-magic-numbers no-empty */
+/* eslint-disable no-magic-numbers, no-empty,@typescript-eslint/no-empty-function */
 import { Directionality } from '@angular/cdk/bidi';
 import { Component, DebugElement, ViewChild } from '@angular/core';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -25,7 +25,7 @@ describe('Tags', () => {
             providers: [{
                 provide: Directionality, useFactory: () => ({
                     value: dir,
-                    // tslint:disable-next-line: no-inferred-empty-object-type
+                    // eslint-disable-next-line
                     change: new Subject()
                 })
             }]

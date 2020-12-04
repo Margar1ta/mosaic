@@ -1,4 +1,4 @@
-// tslint:disable no-magic-numbers
+/* eslint-disable no-magic-numbers, @typescript-eslint/indent */
 import { FlatTreeControl } from './flat-tree-control';
 
 

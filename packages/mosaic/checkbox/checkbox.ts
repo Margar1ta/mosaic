@@ -72,11 +72,11 @@ export class McCheckboxChange {
 // Boilerplate for applying mixins to McCheckbox.
 /** @docs-private */
 export class McCheckboxBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export const McCheckboxMixinBase:
     HasTabIndexCtor &
     CanColorCtor &
@@ -248,7 +248,7 @@ export class McCheckbox extends McCheckboxMixinBase implements ControlValueAcces
      * Called when the checkbox is blurred. Needed to properly implement ControlValueAccessor.
      * @docs-private
      */
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     onTouched: () => any = () => {};
 
     ngAfterViewInit() {
@@ -353,7 +353,7 @@ export class McCheckbox extends McCheckboxMixinBase implements ControlValueAcces
         // emit its event object to the `change` output.
         event.stopPropagation();
     }
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     private controlValueAccessorChangeFn: (value: any) => void = () => {};
 
     private transitionCheckState(newState: TransitionCheckState) {

@@ -37,11 +37,11 @@ export class McVerticalNavbarItemBadge {}
 
 
 class McVerticalNavbarItemBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McVerticalNavbarMixinBase: HasTabIndexCtor & CanDisableCtor & typeof McVerticalNavbarItemBase
     = mixinTabIndex(mixinDisabled(McVerticalNavbarItemBase));
 

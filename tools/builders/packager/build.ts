@@ -12,7 +12,7 @@ import { dirname, join, resolve } from 'path';
 import { IPackagerOptions } from './schema';
 
 
-// tslint:disable-next-line:max-func-body-length
+// eslint-disable-next-line 
 export async function packager(options: IPackagerOptions, context: BuilderContext): Promise<BuilderOutput> {
 
     const project = context.target !== undefined ? context.target.project : '';
@@ -26,7 +26,7 @@ export async function packager(options: IPackagerOptions, context: BuilderContex
     let ngPackagrBuilderOptions;
 
     try {
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         ngPackagrBuilderOptions = ((await context.getTargetOptions(target)) as unknown) as NgPackagrBuilderOptions;
 
         if (ngPackagrBuilderOptions.project === undefined) {
@@ -108,7 +108,7 @@ export async function packager(options: IPackagerOptions, context: BuilderContex
 
         writeFileSync(
             join(libraryDestination, 'package.json'),
-            // tslint:disable-next-line:no-magic-numbers
+            // eslint-disable-next-line no-magic-numbers
             JSON.stringify(releasePackageJson, null, 4),
             { encoding: 'utf-8' }
         );

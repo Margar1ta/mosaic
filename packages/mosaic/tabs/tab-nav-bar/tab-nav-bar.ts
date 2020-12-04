@@ -24,10 +24,10 @@ import {
 // Boilerplate for applying mixins to McTabNav.
 /** @docs-private */
 export class McTabNavBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McTabNavMixinBase: CanColorCtor &
     typeof McTabNavBase = mixinColor(McTabNavBase);
 
@@ -52,7 +52,7 @@ export class McTabNav extends McTabNavMixinBase implements CanColor {
 
 // Boilerplate for applying mixins to McTabLink.
 export class McTabLinkBase {}
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McTabLinkMixinBase: HasTabIndexCtor & CanDisableCtor &
     typeof McTabLinkBase = mixinTabIndex(mixinDisabled(McTabLinkBase));
 

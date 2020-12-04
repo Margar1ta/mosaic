@@ -6,7 +6,7 @@ import { mixinDisabled, CanDisable, CanDisableCtor } from '../common-behaviors/i
 /** @docs-private */
 export class McOptgroupBase {}
 
-// tslint:disable-next-line: naming-convention
+// eslint-disable-next-line 
 export const McOptgroupMixinBase: CanDisableCtor & typeof McOptgroupBase = mixinDisabled(McOptgroupBase);
 
 let uniqueOptgroupIdCounter = 0;

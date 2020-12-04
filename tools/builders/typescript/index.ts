@@ -8,7 +8,7 @@ import { ITypescriptBuilderOptions } from './schema';
 
 
 export async function executeCommand(command: string, cwd?: string): Promise<string> {
-    // tslint:disable-next-line:no-magic-numbers
+    // eslint-disable-next-line no-magic-numbers
     const maxBuffer = 1024 * 1024 * 10;
 
     const options: ExecOptions = {
@@ -67,5 +67,5 @@ async function run(options: ITypescriptBuilderOptions, context: BuilderContext):
     };
 }
 
-// tslint:disable-next-line:no-default-export
+// eslint-disable-next-line import/no-default-export
 export default createBuilder<ITypescriptBuilderOptions & JsonObject>(run);

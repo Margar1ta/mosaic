@@ -1,4 +1,4 @@
-// tslint:disable: no-empty
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 import { Component, DebugElement } from '@angular/core';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';

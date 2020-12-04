@@ -4,7 +4,7 @@ import { AbstractConstructor, Constructor } from './constructor';
 import { CanDisable } from './disabled';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface HasTabIndex {
     tabIndex: number;
 }
@@ -16,9 +16,9 @@ export function mixinTabIndex<T extends AbstractConstructor<CanDisable>>(base: T
     HasTabIndexCtor & T {
     // Note: We cast `base` to `unknown` and then `Constructor`. It could be an abstract class,
     // but given we `extend` it from another class, we can assume a constructor being accessible.
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     abstract class Mixin extends (base as unknown as Constructor<CanDisable>) {
-        // tslint:disable-next-line:orthodox-getter-and-setter
+        // eslint-disable-next-line 
         private _tabIndex: number = defaultTabIndex;
         defaultTabIndex = defaultTabIndex;
 

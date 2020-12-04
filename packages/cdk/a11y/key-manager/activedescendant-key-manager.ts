@@ -7,7 +7,7 @@ import { ListKeyManager, ListKeyManagerOption } from './list-key-manager';
  * Each item must know how to style itself as active or inactive and whether or not it is
  * currently disabled.
  */
-// tslint:disable-next-line naming-convention
+// eslint-disable-next-line
 export interface Highlightable extends ListKeyManagerOption {
     // Applies the styles for an active item to this item.
     setActiveStyles(): void;

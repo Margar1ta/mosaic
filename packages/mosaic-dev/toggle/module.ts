@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,7 +26,7 @@ export class DemoComponent {
     toggleControl = new FormControl(true);
 
     constructor() {
-        // tslint:disable-next-line
+        // eslint-disable-next-line
         this.toggleControl.valueChanges.subscribe(console.log);
     }
 }

@@ -75,11 +75,11 @@ export class McButtonCssStyler {
 }
 
 export class McButtonBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McButtonMixinBase: HasTabIndexCtor & CanDisableCtor & CanColorCtor &
     typeof McButtonBase = mixinTabIndex(mixinColor(mixinDisabled(McButtonBase)));
 

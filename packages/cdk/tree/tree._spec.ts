@@ -1,4 +1,4 @@
-// tslint:disable no-magic-numbers
+/* eslint-disable no-magic-numbers */
 import { CollectionViewer, DataSource } from '@angular/cdk/collections';
 import { Component, ViewChild, TrackByFunction } from '@angular/core';
 import { ComponentFixture, TestBed, fakeAsync, flush } from '@angular/core/testing';
@@ -14,10 +14,10 @@ import { CdkTree } from './tree';
 import { getTreeControlFunctionsMissingError } from './tree-errors';
 
 
-// tslint:disable-next-line:max-func-body-length
+// eslint-disable-next-line
 xdescribe('CdkTree', () => {
     /** Represents an indent for expectNestedTreeToMatch */
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line
     const _ = {};
     let dataSource: FakeDataSource;
     let treeElement: HTMLElement;
@@ -912,7 +912,7 @@ class FakeDataSource extends DataSource<TestData> {
         this.isConnected = true;
         const streams = [this.dataChange, collectionViewer.viewChange];
 
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         return combineLatest<TestData[]>(streams)
             .pipe(map((data) => {
                 this.treeControl.dataNodes = data;

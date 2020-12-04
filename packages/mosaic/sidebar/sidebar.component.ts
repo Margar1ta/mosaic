@@ -21,7 +21,7 @@ export enum SidebarPositions {
     Right = 'right'
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 interface McSidebarParams {
     openedStateMinWidth: string;
     openedStateWidth: string;
@@ -160,13 +160,13 @@ export class McSidebar implements OnDestroy, OnInit, AfterContentInit {
         };
 
         this.ngZone.runOutsideAngular(() => {
-            // tslint:disable-next-line: no-unbound-method
+            // eslint-disable-next-line @typescript-eslint/unbound-method
             document.addEventListener('keypress', this.documentKeydownListener, true);
         });
     }
 
     private unRegisterKeydownListener(): void {
-        // tslint:disable-next-line: no-unbound-method
+        // eslint-disable-next-line @typescript-eslint/unbound-method
         document.removeEventListener('keypress', this.documentKeydownListener, true);
     }
 

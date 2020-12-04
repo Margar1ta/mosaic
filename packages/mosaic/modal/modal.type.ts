@@ -44,7 +44,7 @@ export interface IModalOptions<T = any, R = any> {
     mcOnCancel?: EventEmitter<T> | OnClickCallback<T>;
 }
 
-// tslint:disable-next-line:no-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export interface IModalOptionsForService<T = any> extends IModalOptions<T> {
     mcOnOk?: OnClickCallback<T>;
     mcOnCancel?: OnClickCallback<T>;
@@ -52,7 +52,7 @@ export interface IModalOptionsForService<T = any> extends IModalOptions<T> {
 
 export interface IModalButtonOptions<T = any> {
     label: string;
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     type?: string;
     shape?: string;
     ghost?: boolean;

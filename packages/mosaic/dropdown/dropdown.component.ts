@@ -36,7 +36,7 @@ import { DropdownPositionX, DropdownPositionY } from './dropdown-positions';
 
 
 /** Default `mc-dropdown` options that can be overridden. */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface McDropdownDefaultOptions {
     /** The x-axis position of the dropdown. */
     xPosition: DropdownPositionX;
@@ -65,7 +65,7 @@ export const MC_DROPDOWN_DEFAULT_OPTIONS =
     });
 
 /** @docs-private */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export function MC_DROPDOWN_DEFAULT_OPTIONS_FACTORY(): McDropdownDefaultOptions {
     return {
         overlapTriggerX: true,
@@ -269,7 +269,7 @@ export class McDropdown implements AfterContentInit, McDropdownPanel<McDropdownI
 
     /** Handle a keyboard event from the dropdown, delegating to the appropriate action. */
     handleKeydown(event: KeyboardEvent) {
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         const keyCode = event.keyCode;
 
         switch (keyCode) {

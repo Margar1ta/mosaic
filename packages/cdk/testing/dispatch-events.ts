@@ -1,4 +1,4 @@
-// tslint:disable:no-reserved-keywords
+/* eslint-disable  */
 
 import {
     createFakeEvent,
@@ -16,7 +16,7 @@ export function dispatchEvent(node: Node | Window, event: Event): Event {
 }
 
 /** Shorthand to dispatch a fake event on a specified node. */
-// tslint:disable-next-line:no-reserved-keywords
+// eslint-disable-next-line 
 export function dispatchFakeEvent(node: Node | Window, type: string, canBubble?: boolean): Event {
     return dispatchEvent(node, createFakeEvent(type, canBubble));
 }
@@ -35,7 +35,7 @@ node: Node, type: string, x = 0, y = 0, event = createMouseEvent(type, x, y)
 }
 
 /** Shorthand to dispatch a touch event on the specified coordinates. */
-// tslint:disable-next-line:no-reserved-keywords
+// eslint-disable-next-line
 export function dispatchTouchEvent(node: Node, type: string, x = 0, y = 0) {
     return dispatchEvent(node, createTouchEvent(type, x, y));
 }

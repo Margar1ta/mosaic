@@ -1,4 +1,4 @@
-/* tslint:disable:no-magic-numbers */
+/* eslint-disable no-magic-numbers */
 import { Component } from '@angular/core';
 import { DateAdapter, MC_DATE_LOCALE } from '@ptsecurity/cdk/datetime';
 import { MomentDateAdapter } from '@ptsecurity/mosaic-moment-adapter/adapter';
@@ -7,9 +7,9 @@ import { MomentDateAdapter } from '@ptsecurity/mosaic-moment-adapter/adapter';
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
 // the `default as` syntax.
-// tslint:disable-next-line:ordered-imports
+// eslint-disable-next-line import/order
 import * as _moment from 'moment';
-// tslint:disable-next-line:no-duplicate-imports
+// eslint-disable-next-line no-duplicate-imports
 import { default as _rollupMoment, Moment } from 'moment';
 
 

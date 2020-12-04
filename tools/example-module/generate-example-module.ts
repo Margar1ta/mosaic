@@ -1,4 +1,4 @@
-/* tslint:disable:naming-convention no-parameter-reassignment */
+/* eslint-disable , @typescript-eslint/no-param-reassign */
 import * as fs from 'fs';
 import * as path from 'path';
 

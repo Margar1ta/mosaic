@@ -15,7 +15,7 @@ export class SidepanelOverviewExample {
     @ViewChild(TemplateRef, {static: false}) template: TemplateRef<any>;
 
     arrayLength = 40;
-    array = new Array(this.arrayLength); // tslint:disable-line
+    array = new Array(this.arrayLength); // eslint-disable-line
 
     constructor(private sidepanelService: McSidepanelService) {}
 

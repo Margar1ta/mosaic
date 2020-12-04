@@ -10,7 +10,7 @@ import { McRadioModule } from '@ptsecurity/mosaic/radio';
 import { ArrowPlacements, McToolTipModule } from '@ptsecurity/mosaic/tooltip';
 
 
-/* tslint:disable:no-trailing-whitespace */
+/* eslint-disable no-trailing-spaces */
 @Component({
     selector: 'app',
     styleUrls: ['../main.scss', './styles.scss'],

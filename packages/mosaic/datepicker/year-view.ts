@@ -172,7 +172,7 @@ export class McYearView<D> implements AfterContentInit {
         const PAGE_SHIFT = 10;
         const MAX_MONTH_INDEX = 11;
 
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         switch (event.keyCode) {
             case LEFT_ARROW:
                 this.activeDate = this.dateAdapter.addCalendarMonths(this._activeDate, isRtl ? 1 : -1);
@@ -229,7 +229,7 @@ export class McYearView<D> implements AfterContentInit {
         const monthNames = this.dateAdapter.getMonthNames('short');
 
         // First row of months only contains 5 elements so we can fit the year label on the same row.
-        // tslint:disable-next-line:no-magic-numbers
+        // eslint-disable-next-line no-magic-numbers
         this.months = [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]].map((row) => row.map(
             (month) => this.createCellForMonth(month, monthNames[month])));
         this.changeDetectorRef.markForCheck();

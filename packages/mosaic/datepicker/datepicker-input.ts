@@ -1,4 +1,4 @@
-// tslint:disable:no-empty
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import {
     Directive,
@@ -120,10 +120,10 @@ export class McDatepickerInput<D> implements ControlValueAccessor, OnDestroy, Va
     }
 
     set value(value: D | null) {
-        // tslint:disable-next-line:no-parameter-reassignment
+        // eslint-disable-next-line @typescript-eslint/no-param-reassign
         value = this.dateAdapter.deserialize(value);
         this.lastValueValid = !value || this.dateAdapter.isValid(value);
-        // tslint:disable-next-line:no-parameter-reassignment
+        // eslint-disable-next-line @typescript-eslint/no-param-reassign
         value = this.getValidDateOrNull(value);
         const oldDate = this.value;
         this._value = value;
@@ -278,7 +278,7 @@ export class McDatepickerInput<D> implements ControlValueAccessor, OnDestroy, Va
     }
 
     onKeydown(event: KeyboardEvent) {
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         const isAltDownArrow = event.altKey && event.keyCode === DOWN_ARROW;
 
         if (this.datepicker && isAltDownArrow && !this.elementRef.nativeElement.readOnly) {

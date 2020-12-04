@@ -2,7 +2,7 @@
 import { NgControl } from '@angular/forms';
 
 
-// tslint:disable-next-line: naming-convention
+// eslint-disable-next-line
 export interface McTagTextControl {
     id: string;
 

@@ -1,4 +1,4 @@
-/* tslint:disable:no-reserved-keywords */
+/* eslint-disable  */
 import { Component } from '@angular/core';
 import { FlatTreeControl } from '@ptsecurity/cdk/tree';
 import { McTreeFlatDataSource, McTreeFlattener } from '@ptsecurity/mosaic/tree';

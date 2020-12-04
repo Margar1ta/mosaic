@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { Component, TemplateRef } from '@angular/core';
 import { McModalRef, McModalService } from '@ptsecurity/mosaic/modal';
 

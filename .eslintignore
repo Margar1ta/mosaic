@@ -1,0 +1,9 @@
+# /node_modules/* and /bower_components/* ignored by default
+
+# Ignore built files except build/index.js
+packages/mosaic-examples/example-data.ts
+packages/docs/src/app/shared/stackblitz/stackblitz-writer.ts
+packages/mosaic/core/common-behaviors/tabindex.spec.ts
+packages/mosaic/divider/divider.spec.ts
+
+

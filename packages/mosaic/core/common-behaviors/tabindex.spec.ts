@@ -1,4 +1,4 @@
-// tslint:disable:no-magic-numbers
+/* eslint-disable no-magic-numbers */
 import { mixinTabIndex } from './tabindex';
 
 

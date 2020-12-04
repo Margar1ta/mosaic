@@ -1,5 +1,5 @@
-// tslint:disable:no-console
-// tslint:disable:no-magic-numbers
+/* eslint-disable no-console */
+/* eslint-disable no-magic-numbers */
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,10 +19,10 @@ import { McInputModule } from '@ptsecurity/mosaic/input';
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
 // the `default as` syntax.
-// tslint:disable-next-line:ordered-imports
+// eslint-disable-next-line import/order
 import * as _moment from 'moment';
 // @ts-ignore
-// tslint:disable-next-line:no-duplicate-imports
+// eslint-disable-next-line no-duplicate-imports
 import { default as _rollupMoment, Moment } from 'moment';
 
 

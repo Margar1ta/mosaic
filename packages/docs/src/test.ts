@@ -5,11 +5,11 @@ import {
     BrowserDynamicTestingModule,
     platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
-// tslint:disable-next-line:no-import-side-effect
+// eslint-disable-next-line import/no-unassigned-import
 import 'zone.js/dist/zone-testing';
 
 
-// tslint:disable-next-line:no-reserved-keywords
+// eslint-disable-next-line 
 declare const require: any;
 
 // First, initialize the Angular testing environment.

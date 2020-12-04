@@ -34,7 +34,7 @@ export class WithDefaultLocaleComponent {
     encapsulation: ViewEncapsulation.None,
     providers: [{ provide: MC_LOCALE_ID, useValue: 'en' }]
 })
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export class WithENLocaleComponent {
     locale = 'ru';
 

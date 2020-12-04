@@ -1,5 +1,5 @@
-// tslint:disable:no-magic-numbers
-// tslint:disable:mocha-no-side-effect-code
+/* eslint-disable no-magic-numbers */
+/* eslint-disable  */
 import { LOCALE_ID } from '@angular/core';
 import { inject, TestBed, waitForAsync } from '@angular/core/testing';
 import {
@@ -7,14 +7,14 @@ import {
     MC_DATE_LOCALE
 } from '@ptsecurity/cdk/datetime';
 import * as moment from 'moment';
-// tslint:disable-next-line:no-duplicate-imports
+// eslint-disable-next-line no-duplicate-imports
 import { Moment } from 'moment';
 
 import { MC_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateModule } from './index';
 import { MomentDateAdapter } from './moment-date-adapter';
 
 
-// tslint:disable:one-variable-per-declaration
+/* eslint-disable one-var */
 const JAN = 0, FEB = 1, MAR = 2, DEC = 11;
 
 describe('MomentDateAdapter', () => {

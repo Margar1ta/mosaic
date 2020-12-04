@@ -1,4 +1,4 @@
-/* tslint:disable:no-reserved-keywords object-literal-key-quotes */
+/* eslint-disable , quote-props */
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component } from '@angular/core';
 import { FlatTreeControl } from '@ptsecurity/cdk/tree';

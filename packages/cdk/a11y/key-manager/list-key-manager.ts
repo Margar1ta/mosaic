@@ -15,7 +15,7 @@ import { debounceTime, filter, map, tap } from 'rxjs/operators';
 
 
 // This interface is for items that can be passed to a ListKeyManager.
-// tslint:disable-next-line naming-convention
+// eslint-disable-next-line
 export interface ListKeyManagerOption {
     // Whether the option is disabled.
     disabled?: boolean;
@@ -24,7 +24,7 @@ export interface ListKeyManagerOption {
     getLabel?(): string;
 }
 
-/* tslint:disable:member-ordering */
+/* eslint-disable @typescript-eslint/member-ordering */
 /**
  * This class manages keyboard events for selectable lists. If you pass it a query list
  * of items, it will set the active item correctly when arrow events occur.
@@ -195,7 +195,7 @@ export class ListKeyManager<T extends ListKeyManagerOption> {
      * @param event Keyboard event to be used for determining which element should be active.
      */
     onKeydown(event: KeyboardEvent): void {
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         const keyCode = event.keyCode;
 
         switch (keyCode) {
@@ -311,7 +311,7 @@ export class ListKeyManager<T extends ListKeyManagerOption> {
      * Allows setting the active item without any other effects.
      * @param item Item to be set as active or index Index of the item to be set as active..
      */
-    // tslint:disable-next-line:unified-signatures
+    // eslint-disable-next-line @typescript-eslint/unified-signatures
     updateActiveItem(item: number | T): void;
 
     updateActiveItem(item: any): void {
@@ -392,4 +392,4 @@ export class ListKeyManager<T extends ListKeyManagerOption> {
     }
 }
 
-/* tslint:enable:member-ordering */
+/* eslint-enable @typescript-eslint/member-ordering */

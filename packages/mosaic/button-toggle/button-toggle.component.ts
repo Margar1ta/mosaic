@@ -150,11 +150,11 @@ export class McButtonToggleGroup implements ControlValueAccessor, OnInit, AfterC
      * The method to be called in order to update ngModel.
      * Now `ngModel` binding is not supported in multiple selection mode.
      */
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     controlValueAccessorChangeFn: (value: any) => void = () => {};
 
     /** onTouch function registered via registerOnTouch (ControlValueAccessor). */
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     onTouched: () => any = () => {};
 
     ngOnInit() {
@@ -331,7 +331,7 @@ export class McButtonToggle implements OnInit, OnDestroy {
         }
     }
 
-    // tslint:disable-next-line:no-reserved-keywords
+    // eslint-disable-next-line 
     type: ToggleType;
 
     @ViewChild(McButton, { static: false }) mcButton: McButton;

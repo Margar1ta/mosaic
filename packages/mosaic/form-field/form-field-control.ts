@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 
 
 /** An interface which allows a control to work inside of a `MсFormField`. */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export abstract class McFormFieldControl<T> {
     /** The value of the control. */
     value: T | null;

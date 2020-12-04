@@ -1,5 +1,5 @@
-/* tslint:disable:naming-convention */
-// tslint:disable:no-console
+/* eslint-disable  */
+/* eslint-disable no-console */
 import { green, yellow, bold } from 'chalk';
 import { createReadStream, createWriteStream, readFileSync } from 'fs';
 import { prompt } from 'inquirer';
@@ -8,7 +8,7 @@ import { Readable } from 'stream';
 
 
 // These imports lack type definitions.
-// tslint:disable:no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const conventionalChangelog = require('conventional-changelog');
 const changelogCompare = require('conventional-changelog-writer/lib/util');
 const merge2 = require('merge2');
@@ -72,7 +72,7 @@ export async function prependChangelogFromLatestTag(changelogPath: string, relea
     // actually prepend the new changelog to the existing one.
     const previousChangelogStream = createReadStream(changelogPath);
 
-    // tslint:disable:no-inferred-empty-object-type
+    /* eslint-disable  */
     return new Promise((resolve, reject) => {
         // Sequentially merge the changelog output and the previous changelog stream, so that
         // the new changelog section comes before the existing versions. Afterwards, pipe into the
@@ -145,7 +145,7 @@ function createChangelogWriterOptions(changelogPath: string, presetWriterOptions
 
                     const packageName = commit.package || 'mosaic';
 
-                    // tslint:disable-next-line:no-reserved-keywords
+                    // eslint-disable-next-line 
                     const type = getTypeOfCommitGroupDescription(group.title);
 
                     if (!packageGroups[packageName]) {
@@ -160,7 +160,7 @@ function createChangelogWriterOptions(changelogPath: string, presetWriterOptions
                         } else if (n.type === CommitNote.BreakingChange) {
                             packageGroup.breakingChanges.push(n);
                         } else {
-                            // tslint:disable-next-line:no-magic-numbers
+                            // eslint-disable-next-line no-magic-numbers
                             throw Error(`Found commit note that is not known: ${JSON.stringify(n, null, 4)}`);
                         }
                     });

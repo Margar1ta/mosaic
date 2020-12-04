@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { red, bold, yellow } from 'chalk';
 import { existsSync } from 'fs';
 import { sync as glob } from 'glob';

@@ -32,7 +32,7 @@ export class ModalBuilderForService {
         this.overlayRef.keydownEvents()
             // @ts-ignore
             .pipe(filter((event: KeyboardEvent) => {
-                // tslint:disable-next-line:deprecation replacement .key isn't supported in Edge
+                // eslint-disable-next-line import/no-deprecated
                 return event.keyCode === ESCAPE && options.mcCloseByESC;
             }))
             .subscribe(() => this.modalRef!.instance.close());
@@ -88,7 +88,7 @@ export class McModalService {
 
         if (typeof options.mcOnCancel !== 'function') {
             // Leave a empty function to close this modal by default
-            // tslint:disable-next-line
+            // eslint-disable-next-line
             options.mcOnCancel = () => {};
         }
 
@@ -98,7 +98,7 @@ export class McModalService {
 
 
         if (!('mcWidth' in options)) {
-            // tslint:disable-next-line
+            // eslint-disable-next-line
             options.mcWidth = 480;
         }
 
@@ -113,7 +113,7 @@ export class McModalService {
         // NOTE: only support function currently by calling confirm()
         if (typeof options.mcOnOk !== 'function') {
             // Leave a empty function to close this modal by default
-            // tslint:disable-next-line
+            // eslint-disable-next-line
             options.mcOnOk = () => {};
         }
 
@@ -134,7 +134,7 @@ export class McModalService {
         return this.simpleConfirm(options, 'success');
     }
 
-    // tslint:disable-next-line: no-reserved-keywords
+    // eslint-disable-next-line
     delete<T>(options: IModalOptionsForService<T> = {}): McModalRef<T> {
         return this.simpleConfirm(options, 'warn');
     }

@@ -37,4 +37,4 @@ export class PanelDemoComponent {
         PanelDemoComponent
     ]
 })
-export class DemoModule {}  // tslint:disable-line no-unnecessary-class
+export class DemoModule {}  // eslint-disable-line  @typescript-eslint/no-extraneous-class

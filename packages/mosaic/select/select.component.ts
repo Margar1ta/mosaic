@@ -1,4 +1,4 @@
-/* tslint:disable:no-empty */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 
 import { Directionality } from '@angular/cdk/bidi';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
@@ -157,7 +157,7 @@ export class McSelectSearch implements AfterContentInit, OnDestroy {
     }
 
     handleKeydown(event: KeyboardEvent) {
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         if (event.keyCode === ESCAPE) {
             if (this.input.value) {
                 this.reset();
@@ -165,7 +165,7 @@ export class McSelectSearch implements AfterContentInit, OnDestroy {
             }
         }
 
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         if ([SPACE, HOME, END].includes(event.keyCode)) {
             event.stopPropagation();
         }
@@ -193,7 +193,7 @@ export class McSelectBase {
     ) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 const McSelectMixinBase: CanDisableCtor & HasTabIndexCtor & CanUpdateErrorStateCtor &
     typeof McSelectBase = mixinTabIndex(mixinDisabled(mixinErrorState(McSelectBase)));
 
@@ -426,7 +426,7 @@ export class McSelect extends McSelectMixinBase implements
     }
 
     set compareWith(fn: (o1: any, o2: any) => boolean) {
-        /* tslint:disable-next-line:strict-type-predicates */
+        /* eslint-disable-next-line */
         if (typeof fn !== 'function') {
             throw getMcSelectNonFunctionValueError();
         }
@@ -933,7 +933,7 @@ export class McSelect extends McSelectMixinBase implements
 
     /** Handles keyboard events while the select is closed. */
     private handleClosedKeydown(event: KeyboardEvent): void {
-        /* tslint:disable-next-line */
+        /* eslint-disable-next-line */
         const keyCode = event.keyCode;
         const isArrowKey = keyCode === DOWN_ARROW || keyCode === UP_ARROW ||
             keyCode === LEFT_ARROW || keyCode === RIGHT_ARROW;
@@ -950,7 +950,7 @@ export class McSelect extends McSelectMixinBase implements
 
     /** Handles keyboard events when the selected is open. */
     private handleOpenKeydown(event: KeyboardEvent): void {
-        /* tslint:disable-next-line */
+        /* eslint-disable-next-line */
         const keyCode = event.keyCode;
         const isArrowKey = keyCode === DOWN_ARROW || keyCode === UP_ARROW;
 
@@ -1242,7 +1242,7 @@ export class McSelect extends McSelectMixinBase implements
         // Window width without scrollbar
         const windowWidth = this.getOverlayWidth();
         const isRtl = this.isRtl();
-        /* tslint:disable-next-line:no-magic-numbers */
+        /* eslint-disable-next-line no-magic-numbers */
         const paddingWidth = SELECT_PANEL_PADDING_X * 2;
         let offsetX: number;
         let overlayMaxWidth: number;

@@ -1,6 +1,6 @@
-// tslint:disable:no-magic-numbers
-// tslint:disable:prefer-array-literal
-// tslint:disable:no-empty
+/* eslint-disable no-magic-numbers */
+/* eslint-disable */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { Direction, Directionality } from '@angular/cdk/bidi';
@@ -470,7 +470,7 @@ describe('McDropdown', () => {
         fixture.detectChanges();
         tick(500);
 
-        // tslint:disable-next-line:no-unbound-method
+        // eslint-disable-next-line @typescript-eslint/unbound-method
         expect(fixture.componentInstance.items.first.focus).toHaveBeenCalledWith('mouse');
     }));
 
@@ -486,12 +486,12 @@ describe('McDropdown', () => {
         fixture.detectChanges();
         flush();
 
-        // tslint:disable-next-line:no-unbound-method
+        // eslint-disable-next-line @typescript-eslint/unbound-method
         expect(fixture.componentInstance.items.first.focus).toHaveBeenCalledWith('touch');
     }));
 
     it('should close the dropdown when using the CloseScrollStrategy', fakeAsync(() => {
-        // tslint:disable-next-line
+        // eslint-disable-next-line
         const scrolledSubject = new Subject();
         const fixture = createComponent(SimpleDropdown,  [
             {
@@ -682,7 +682,7 @@ describe('McDropdown', () => {
             fixture.componentInstance.triggerEl.nativeElement.click();
             fixture.detectChanges();
             tick(500);
-            // tslint:disable-next-line
+            // eslint-disable-next-line
             zone!.simulateZoneExit();
 
             // Flush due to the additional tick that is necessary for the FocusMonitor.
@@ -1544,7 +1544,7 @@ describe('McDropdown', () => {
             event.preventDefault = jasmine.createSpy('preventDefault spy');
 
             dispatchMouseEvent(overlay.querySelector('[mc-dropdown-item]')!, 'mousedown', 0, 0, event);
-            // tslint:disable-next-line: no-unbound-method
+            // eslint-disable-next-line @typescript-eslint/unbound-method
             expect(event.preventDefault).toHaveBeenCalled();
         });
 
@@ -1753,7 +1753,7 @@ class PositionedDropdown {
     yPosition: DropdownPositionY = 'above';
 }
 
-// tslint:disable-next-line: naming-convention
+// eslint-disable-next-line 
 interface TestableDropdown {
     trigger: McDropdownTrigger;
     triggerEl: ElementRef<HTMLElement>;

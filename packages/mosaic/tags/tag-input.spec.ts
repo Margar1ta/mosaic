@@ -1,5 +1,5 @@
-// tslint:disable:no-unbound-method
-// tslint:disable:no-empty
+/* eslint-disable @typescript-eslint/unbound-method */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 
 import { Directionality } from '@angular/cdk/bidi';
 import { PlatformModule } from '@angular/cdk/platform';
@@ -34,7 +34,7 @@ describe('McTagInput', () => {
                 provide: Directionality, useFactory: () => {
                     return {
                         value: dir.toLowerCase(),
-                        // tslint:disable-next-line: no-inferred-empty-object-type
+                        // eslint-disable-next-line
                         change: new Subject()
                     };
                 }
@@ -170,7 +170,7 @@ describe('McTagInput', () => {
                     declarations: [TestTagInput],
                     providers: [{
                         provide: MC_TAGS_DEFAULT_OPTIONS,
-                        // tslint:disable-next-line: no-object-literal-type-assertion
+                        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
                         useValue: ({ separatorKeyCodes: [COMMA] } as McTagsDefaultOptions)
                     }]
                 })

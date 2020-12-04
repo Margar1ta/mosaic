@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { Octokit } from '@octokit/rest';
 import { green, yellow, red, cyan, bold, italic } from 'chalk';
 import { readFileSync, writeFileSync } from 'fs';

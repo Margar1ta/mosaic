@@ -47,7 +47,7 @@ export class ExampleViewer {
             this.selectedPortal = new ComponentPortal(this.exampleData.component);
             this.generateExampleTabs();
         } else {
-            // tslint:disable-next-line:no-console
+            // eslint-disable-next-line no-console
             console.error(`Could not find example: ${exampleName}`);
         }
     }

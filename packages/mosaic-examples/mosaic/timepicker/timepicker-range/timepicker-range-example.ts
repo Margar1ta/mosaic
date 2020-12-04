@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import * as momentImported from 'moment';
 // @ts-ignore
-// tslint:disable-next-line:no-duplicate-imports
+// eslint-disable-next-line no-duplicate-imports
 import { default as _rollupMoment } from 'moment';
 
 
-// tslint:disable-next-line
+// eslint-disable-next-line
 const moment = _rollupMoment || momentImported;
 /**
  * @title Timepicker range

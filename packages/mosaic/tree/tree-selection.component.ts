@@ -1,4 +1,4 @@
-/* tslint:disable:no-empty */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { SelectionModel } from '@angular/cdk/collections';
 import {
@@ -61,7 +61,7 @@ export class McTreeSelectionChange<T> {
     constructor(public source: McTreeSelection<any>, public option: T) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 interface SelectionModelOption {
     id: number | string;
     value: string;
@@ -292,7 +292,7 @@ export class McTreeSelection<T extends McTreeOption> extends CdkTree<T>
 
     onKeyDown(event: KeyboardEvent): void {
         this.keyManager.setFocusOrigin('keyboard');
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         const keyCode = event.keyCode;
 
         switch (keyCode) {

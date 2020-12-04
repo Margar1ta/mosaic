@@ -30,7 +30,7 @@ export class TableOfContents {
     @Input() links: ILink[] = [];
     @Input() headerSelectors = '.docs-markdown h3, .docs-markdown h4';
 
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     _rootUrl = this._router.url.split('#')[0];
 
     constructor(

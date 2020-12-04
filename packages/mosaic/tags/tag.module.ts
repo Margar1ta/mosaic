@@ -29,7 +29,7 @@ import { McTag, McTagAvatar, McTagRemove, McTagTrailingIcon } from './tag.compon
     ],
     providers: [{
         provide: MC_TAGS_DEFAULT_OPTIONS,
-        // tslint:disable-next-line: no-object-literal-type-assertion
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
         useValue: { separatorKeyCodes: [ENTER] } as McTagsDefaultOptions
     }]
 })

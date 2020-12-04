@@ -286,14 +286,14 @@ export class McModalComponent<T = any, R = any> extends McModalRef<T, R>
         }
     }
 
-    // tslint:disable-next-line: no-reserved-keywords
+    // eslint-disable-next-line
     isModalType(type: ModalType): boolean {
         return this.mcModalType === type;
     }
 
     onKeyDown(event: KeyboardEvent): void {
 
-        // tslint:disable-next-line:deprecation .key isn't supported in Edge
+        // eslint-disable-next-line import/no-deprecated
         if (event.keyCode === ESCAPE && this.container && (this.container instanceof OverlayRef)) {
 
             this.close();
@@ -309,7 +309,7 @@ export class McModalComponent<T = any, R = any> extends McModalRef<T, R>
     }
 
     // AoT
-    // tslint:disable-next-line: no-reserved-keywords
+    // eslint-disable-next-line
     onClickOkCancel(type: 'ok' | 'cancel') {
         const trigger = { ok: this.mcOnOk, cancel: this.mcOnCancel }[type];
         const loadingKey = { ok: 'mcOkLoading', cancel: 'mcCancelLoading' }[type];
@@ -371,7 +371,7 @@ export class McModalComponent<T = any, R = any> extends McModalRef<T, R>
     // AoT
     onButtonClick(button: IModalButtonOptions<T>) {
         // Call onClick directly
-        // tslint:disable-next-line:no-inferred-empty-object-type  rule seems to be broken
+        // eslint-disable-next-line
         const result = this.getButtonCallableProp(button, 'onClick');
         if (isPromise(result)) {
             button.loading = true;
@@ -521,6 +521,6 @@ export class McModalComponent<T = any, R = any> extends McModalRef<T, R>
 ////////////
 
 function isPromise(obj: {} | void): boolean {
-    // tslint:disable-next-line: no-unbound-method
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof (obj as Promise<{}>).then === 'function' && typeof (obj as Promise<{}>).catch === 'function';
 }

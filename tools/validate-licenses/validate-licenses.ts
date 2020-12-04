@@ -1,11 +1,11 @@
-/* tslint:disable:no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const spdxSatisfies = require('spdx-satisfies');
 const checker = require('license-checker');
 
 
-/* tslint:disable:object-literal-key-quotes */
-/* tslint:disable:no-console */
+/* eslint-disable quote-props */
+/* eslint-disable no-console */
 const licensesWhitelist = [
     // Regular valid open source licenses.
     'MIT',
@@ -94,7 +94,7 @@ export function validateLicense(): Promise<number> {
                     .map((key) => ({
                         id: key,
                         licenses: ([] as string[])
-                        /* tslint:disable:no-non-null-assertion */
+                        /* eslint-disable @typescript-eslint/no-non-null-assertion */
                             .concat((json[key]).licenses as string[])
                             // `*` is used when the license is guessed.
                             .map((x) => x.replace(/\*$/, ''))

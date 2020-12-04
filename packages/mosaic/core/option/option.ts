@@ -37,7 +37,7 @@ export class McOptionSelectionChange {
  * Contains properties that the options can inherit.
  * @docs-private
  */
-// tslint:disable-next-line: naming-convention
+// eslint-disable-next-line
 export interface McOptionParentComponent {
     multiple?: boolean;
 }
@@ -87,7 +87,7 @@ export class McOption implements AfterViewChecked, OnDestroy {
     private _showCheckbox: boolean;
 
     /** Event emitted when the option is selected or deselected. */
-    // tslint:disable-next-line:no-output-on-prefix
+    // eslint-disable-next-line @angular-eslint/no-output-on-prefix
     @Output() readonly onSelectionChange = new EventEmitter<McOptionSelectionChange>();
 
     /** Emits when the state of the option changes and any parents have to be notified. */
@@ -172,7 +172,7 @@ export class McOption implements AfterViewChecked, OnDestroy {
     }
 
     getHeight(): number {
-        // tslint:disable-next-line:naming-convention
+        // eslint-disable-next-line
         const DOMRect: DOMRect = this.element.nativeElement.getClientRects()[0];
 
         return DOMRect ? DOMRect.height : 0;
@@ -235,7 +235,7 @@ export class McOption implements AfterViewChecked, OnDestroy {
 
     /** Ensures the option is selected when activated from the keyboard. */
     handleKeydown(event: KeyboardEvent): void {
-        // tslint:disable-next-line
+        // eslint-disable-next-line
         if (event.keyCode === ENTER || event.keyCode === SPACE) {
             this.selectViaInteraction();
 

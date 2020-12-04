@@ -5,9 +5,9 @@ import { McIconModule } from '@ptsecurity/mosaic/icon';
 import { McModalModule, McModalRef, McModalService } from '@ptsecurity/mosaic/modal';
 
 
-// tslint:disable:no-console
-// tslint:disable:no-magic-numbers
-// tslint:disable:no-unnecessary-class
+/* eslint-disable no-console */
+/* eslint-disable no-magic-numbers */
+/* eslint-disable @typescript-eslint/no-extraneous-class */
 @Component({
     selector: 'app',
     templateUrl: './template.html',

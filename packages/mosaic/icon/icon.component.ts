@@ -13,16 +13,16 @@ import { mixinColor, CanColor, CanColorCtor, ThemePalette } from '@ptsecurity/mo
     selector: '[mc-icon]',
     host: { class: 'mc mc-icon' }
 })
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export class McIconCSSStyler {}
 
 
 export class McIconBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line: naming-convention
+// eslint-disable-next-line 
 export const McIconMixinBase: CanColorCtor & typeof McIconBase = mixinColor(McIconBase, ThemePalette.Empty);
 
 

@@ -2,9 +2,9 @@
 import { join, resolve } from 'path';
 
 
-/* tslint:disable:no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const packageJSON = require('../../package.json');
-/* tslint:enable:no-var-requires */
+/* eslint-enable @typescript-eslint/no-var-requires */
 
 const angularVersion = packageJSON.requiredAngularVersion;
 

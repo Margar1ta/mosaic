@@ -3,7 +3,7 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Constructor } from './constructor';
 
 
-// tslint:disable-next-line naming-convention
+// eslint-disable-next-line
 export interface CanDisable {
     disabled: boolean;
 }
@@ -24,7 +24,7 @@ export function mixinDisabled<T extends Constructor<{}>>(base: T): CanDisableCto
         private _disabled: boolean = false;
 
         constructor(...args: any[]) {
-            // tslint:disable-next-line
+            // eslint-disable-next-line
             super(...args);
         }
     };

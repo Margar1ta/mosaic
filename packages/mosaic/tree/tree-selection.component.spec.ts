@@ -1,4 +1,4 @@
-/* tslint:disable:no-magic-numbers max-func-body-length no-reserved-keywords */
+/* eslint-disable no-magic-numbers, @typescript-eslint/quotes, prefer-arrow/prefer-arrow-functions */
 import { Component, ViewChild } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
@@ -483,7 +483,7 @@ export function buildFileTree(value: any, level: number): FileNode[] {
 }
 
 function getNodes(treeElement: Element): Element[] {
-    // tslint:disable-next-line: no-unnecessary-type-assertion
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
     return [].slice.call(treeElement.querySelectorAll('.mc-tree-option'))!;
 }
 

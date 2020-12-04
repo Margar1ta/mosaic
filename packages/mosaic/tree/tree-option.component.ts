@@ -21,7 +21,7 @@ import { Subject } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export interface McTreeOptionEvent {
     option: McTreeOption;
 }

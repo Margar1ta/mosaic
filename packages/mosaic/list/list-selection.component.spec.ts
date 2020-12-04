@@ -1,7 +1,7 @@
-// tslint:disable:no-magic-numbers
-// tslint:disable:mocha-no-side-effect-code
-// tslint:disable:max-func-body-length
-// tslint:disable:no-empty
+/* eslint-disable no-magic-numbers */
+/* eslint-disable  */
+/* eslint-disable  */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 
 import { Component, DebugElement, ChangeDetectionStrategy, QueryList, ViewChildren } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, tick, flush, waitForAsync } from '@angular/core/testing';

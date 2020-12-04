@@ -1,6 +1,6 @@
-/* tslint:disable:no-magic-numbers */
-/* tslint:disable:mocha-no-side-effect-code */
-/* tslint:disable:no-empty */
+/* eslint-disable no-magic-numbers */
+/* eslint-disable  */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 import { Component, ViewChild } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -103,13 +103,13 @@ describe('Sidebar', () => {
             testComponent.showContainer = false;
             fixture.detectChanges();
 
-            // tslint:disable-next-line: no-unbound-method
+            // eslint-disable-next-line @typescript-eslint/unbound-method
             expect(document.removeEventListener).toHaveBeenCalledWith('keypress', jasmine.any(Function), true);
 
             testComponent.showContainer = true;
             fixture.detectChanges();
 
-            // tslint:disable-next-line: no-unbound-method
+            // eslint-disable-next-line @typescript-eslint/unbound-method
             expect(document.addEventListener).toHaveBeenCalledWith('keypress', jasmine.any(Function), true);
         });
     });

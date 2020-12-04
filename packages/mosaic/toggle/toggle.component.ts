@@ -29,11 +29,11 @@ let nextUniqueId = 0;
 type ToggleLabelPositionType = 'left' | 'right';
 
 export class McToggleBase {
-    // tslint:disable-next-line: naming-convention
+    // eslint-disable-next-line
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line: naming-convention
+// eslint-disable-next-line
 export const McToggleMixinBase:
     HasTabIndexCtor &
     CanDisableCtor &
@@ -124,7 +124,7 @@ export class McToggleComponent extends McToggleMixinBase
     private uniqueId: string = `mc-toggle-${++nextUniqueId}`;
 
     constructor(
-        // tslint:disable-next-line:naming-convention
+        // eslint-disable-next-line
         public _elementRef: ElementRef,
         private _focusMonitor: FocusMonitor,
         private _changeDetectorRef: ChangeDetectorRef
@@ -179,10 +179,10 @@ export class McToggleComponent extends McToggleMixinBase
         this.disabled = isDisabled;
     }
 
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     private onTouchedCallback = () => {};
 
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     private onChangeCallback = (_: any) => {};
 
     private updateModelValue() {

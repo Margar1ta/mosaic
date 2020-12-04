@@ -1,4 +1,4 @@
-// tslint:disable:no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 import * as child_process from 'child_process';
 import { src, TaskFunction } from 'gulp';
 
@@ -38,12 +38,12 @@ export function execTask(binPath: string, args: string[], options: IExecTaskOpti
 
 export function execNodeTask(packageName: string, executable: string | string[], args?: string[],
                              options: IExecTaskOptions = {}) {
-    // tslint:disable:no-parameter-reassignment
+    /* eslint-disable @typescript-eslint/no-param-reassign */
     if (!args) {
         args = <string[]> executable;
         executable = '';
     }
-    // tslint:enable:no-parameter-reassignment
+    /* eslint-enable @typescript-eslint/no-param-reassign */
 
     return (done: (err: any) => void) => {
         resolveBin(packageName, { executable }, (err: any, binPath: string) => {

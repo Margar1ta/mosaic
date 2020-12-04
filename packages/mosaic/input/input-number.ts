@@ -40,7 +40,7 @@ export function getPrecision(value: number): number {
 
     return arr.length === 1
         ? 1
-        // tslint:disable-next-line:no-magic-numbers
+        // eslint-disable-next-line no-magic-numbers
         :  Math.pow(10, arr[1].length);
 }
 
@@ -100,7 +100,7 @@ export class McNumberInput {
 
         if ('valueAsNumber' in this.nativeElement) {
             Object.defineProperty(Object.getPrototypeOf(this.nativeElement), 'valueAsNumber', {
-                // tslint:disable-next-line:no-reserved-keywords
+                // eslint-disable-next-line
                 get() {
                     const res = parseFloat(normalizeSplitter(this.value));
 
@@ -118,7 +118,7 @@ export class McNumberInput {
     }
 
     onKeyDown(event: KeyboardEvent) {
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         const keyCode = event.keyCode;
 
         const isCtrlA = (e) => e.keyCode === A && (e.ctrlKey || e.metaKey);

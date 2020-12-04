@@ -1,4 +1,4 @@
-// tslint:disable no-magic-numbers
+/* eslint-disable no-magic-numbers */
 import { Component, ViewChild } from '@angular/core';
 import {
     ComponentFixture,
@@ -15,13 +15,13 @@ import { McFormFieldModule } from '@ptsecurity/mosaic/form-field';
 import { McIconModule } from '@ptsecurity/mosaic/icon';
 import * as _moment from 'moment';
 // @ts-ignore
-// tslint:disable-next-line:no-duplicate-imports
+// eslint-disable-next-line no-duplicate-imports
 import { default as _rollupMoment, Moment } from 'moment';
 
 import { McTimepicker, McTimepickerModule } from './index';
 
 
-// tslint:disable-next-line
+// eslint-disable-next-line
 const moment = _rollupMoment || _moment;
 
 @Component({

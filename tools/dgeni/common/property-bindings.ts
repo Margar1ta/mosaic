@@ -4,7 +4,7 @@ import { hasMemberDecorator } from './decorators';
 
 
 /** Interface that describes an Angular property binding. Can be either an input or output. */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface PropertyBinding {
     name: string;
     alias?: string;

@@ -34,7 +34,7 @@ function createComponent<T>(component: Type<T>,
 }
 
 
-// tslint:disable no-unnecessary-class
+/* eslint-disable  @typescript-eslint/no-extraneous-class */
 @Component({
     template: `
         <mc-form-field>
@@ -89,7 +89,7 @@ class McTextareaGrowOff {
 class McFormFieldWithoutBorders {
 }
 
-// tslint:enable no-unnecessary-class
+// eslint-enable  @typescript-eslint/no-extraneous-class
 
 
 describe('McTextarea', () => {

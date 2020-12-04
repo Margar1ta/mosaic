@@ -1,4 +1,4 @@
-/* tslint:disable:no-empty */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 
 import { Directionality } from '@angular/cdk/bidi';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
@@ -124,7 +124,7 @@ class McTreeSelectBase {
     ) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 const McTreeSelectMixinBase: CanDisableCtor & HasTabIndexCtor & CanUpdateErrorStateCtor &
     typeof McTreeSelectBase = mixinTabIndex(mixinDisabled(mixinErrorState(McTreeSelectBase)));
 
@@ -351,7 +351,7 @@ export class McTreeSelect extends McTreeSelectMixinBase implements
     }
 
     set compareWith(fn: (o1: any, o2: any) => boolean) {
-        /* tslint:disable-next-line:strict-type-predicates */
+        /* eslint-disable-next-line  */
         if (typeof fn !== 'function') {
             throw getMcSelectNonFunctionValueError();
         }
@@ -872,7 +872,7 @@ export class McTreeSelect extends McTreeSelectMixinBase implements
     }
 
     private handleClosedKeydown(event: KeyboardEvent) {
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         const keyCode = event.keyCode;
         const isArrowKey = keyCode === DOWN_ARROW || keyCode === UP_ARROW ||
             keyCode === LEFT_ARROW || keyCode === RIGHT_ARROW;
@@ -890,7 +890,7 @@ export class McTreeSelect extends McTreeSelectMixinBase implements
     }
 
     private handleOpenKeydown(event: KeyboardEvent) {
-        /* tslint:disable-next-line */
+        /* eslint-disable-next-line */
         const keyCode = event.keyCode;
         const isArrowKey = keyCode === DOWN_ARROW || keyCode === UP_ARROW;
 
@@ -1062,7 +1062,7 @@ export class McTreeSelect extends McTreeSelectMixinBase implements
         const overlayRect = this.overlayDir.overlayRef.overlayElement.getBoundingClientRect();
         const viewportSize = this.viewportRuler.getViewportSize();
         const isRtl = this.isRtl();
-        /* tslint:disable-next-line:no-magic-numbers */
+        /* eslint-disable-next-line no-magic-numbers */
         const paddingWidth = SELECT_PANEL_PADDING_X * 2;
         let offsetX: number = SELECT_PANEL_PADDING_X;
 

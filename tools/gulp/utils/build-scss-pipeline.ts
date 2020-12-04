@@ -4,12 +4,12 @@ import { join } from 'path';
 import { buildConfig } from '../build-config';
 
 
-/* tslint:disable:no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const gulpSass = require('gulp-sass');
 const nodeSass = require('node-sass');
 const gulpIf = require('gulp-if');
 const gulpCleanCss = require('gulp-clean-css');
-/* tslint:enable:no-var-requires */
+/* eslint-enable @typescript-eslint/no-var-requires */
 
 const sassIncludePaths = [
     join(buildConfig.projectDir, 'node_modules/')

@@ -3,7 +3,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/';
 import { environment } from './environments/environment';
-// tslint:disable-next-line:no-import-side-effect
+// eslint-disable-next-line import/no-unassigned-import
 import './polyfills.ts';
 import { unregisterServiceWorkers } from './unregister-service-workers';
 
@@ -13,11 +13,11 @@ import { unregisterServiceWorkers } from './unregister-service-workers';
 unregisterServiceWorkers()
     .then((hadServiceWorker) => hadServiceWorker && location.reload());
 
-// tslint:disable-next-line:blank-lines
+// eslint-disable-next-line
 if (environment.production) {
     enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-    // tslint:disable-next-line:no-console
+    // eslint-disable-next-line no-console
     .catch((err) => console.error(err));

@@ -125,7 +125,7 @@ export class CdkTree<T> implements AfterContentChecked, CollectionViewer, OnDest
         this.onDestroy.next();
         this.onDestroy.complete();
 
-        // tslint:disable-next-line:no-unbound-method
+        // eslint-disable-next-line @typescript-eslint/unbound-method
         if (this._dataSource && typeof (this.dataSource as DataSource<T>).disconnect === 'function') {
             (this.dataSource as DataSource<T>).disconnect(this);
         }
@@ -207,7 +207,7 @@ export class CdkTree<T> implements AfterContentChecked, CollectionViewer, OnDest
         // Otherwise, use the level of parent node.
         if (this.treeControl.getLevel) {
             context.level = this.treeControl.getLevel(nodeData);
-            /* tslint:disable-next-line:no-typeof-undefined */
+            /* eslint-disable-next-line */
         } else if (typeof parentData !== 'undefined' && this.levels.has(parentData)) {
             context.level = this.levels.get(parentData)! + 1;
         } else {
@@ -234,7 +234,7 @@ export class CdkTree<T> implements AfterContentChecked, CollectionViewer, OnDest
 
         // Cannot use `instanceof DataSource` since the data source could be a literal with
         // `connect` function and may not extends DataSource.
-        // tslint:disable-next-line:no-unbound-method
+        // eslint-disable-next-line @typescript-eslint/unbound-method
         if (typeof (this._dataSource as DataSource<T>).connect === 'function') {
             dataStream = (this._dataSource as DataSource<T>).connect(this);
         } else if (this._dataSource instanceof Observable) {
@@ -258,7 +258,7 @@ export class CdkTree<T> implements AfterContentChecked, CollectionViewer, OnDest
      * clearing the node outlet. Otherwise start listening for new data.
      */
     private switchDataSource(dataSource: DataSource<T> | Observable<T[]> | T[]) {
-        // tslint:disable-next-line:no-unbound-method
+        // eslint-disable-next-line @typescript-eslint/unbound-method
         if (this._dataSource && typeof (this._dataSource as DataSource<T>).disconnect === 'function') {
             (this.dataSource as DataSource<T>).disconnect(this);
         }

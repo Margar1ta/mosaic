@@ -45,7 +45,7 @@ function createComponent<T>(component: Type<T>, imports: any[] = [], providers: 
 }
 
 
-// tslint:disable no-unnecessary-class
+/* eslint-disable  @typescript-eslint/no-extraneous-class */
 @Component({
     template: `
         <mc-form-field>
@@ -156,7 +156,7 @@ class McFormFieldWithNgModelInForm {
     value: string = '';
 }
 
-// tslint:enable no-unnecessary-class
+// eslint-enable  @typescript-eslint/no-extraneous-class
 
 
 describe('McInput', () => {

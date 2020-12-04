@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,7 +24,7 @@ export class DemoComponent {
 
     asyncUpdate$ = this.asyncUpdate.valueChanges.pipe(
         startWith(null),
-        // tslint:disable-next-line:no-magic-numbers
+        // eslint-disable-next-line no-magic-numbers
         debounceTime(3000),
         switchMap(() => {
             return of(this.typesOfShoes);

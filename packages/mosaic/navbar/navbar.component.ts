@@ -46,7 +46,7 @@ export class McNavbarItemBase {
     constructor(public elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McNavbarMixinBase:
     HasTabIndexCtor & CanDisableCtor & typeof McNavbarItemBase = mixinTabIndex(mixinDisabled(McNavbarItemBase));
 

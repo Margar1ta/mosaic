@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,7 +24,7 @@ import { McLinkModule } from '../../mosaic/link';
     encapsulation: ViewEncapsulation.None
 })
 export class DemoComponent {
-    // tslint:disable-next-line:no-magic-numbers
+    // eslint-disable-next-line no-magic-numbers
     readonly shownAlerts: number[]  = Array.from(Array(16).keys());
 
     isAlertShown(id: number) {

@@ -16,7 +16,7 @@ export function extractReleaseNotes(changelogPath: string, versionName: string):
     const matches = releaseNotesRegex.exec(changelogContent);
 
     return matches ? {
-        // tslint:disable:no-magic-numbers
+        /* eslint-disable no-magic-numbers */
         releaseTitle: matches[2],
         releaseNotes: matches[1].trim()
     } : null;

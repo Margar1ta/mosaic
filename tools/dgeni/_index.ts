@@ -1,4 +1,4 @@
-/* tslint:disable */
+/* eslint-disable */
 import * as path from 'path';
 import {sync as globSync} from 'glob';
 

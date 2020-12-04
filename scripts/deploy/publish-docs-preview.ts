@@ -1,16 +1,16 @@
-/* tslint:disable:no-console */
+/* eslint-disable no-console */
 import { Octokit } from '@octokit/rest';
 import { execSync } from 'child_process';
 import { join } from 'path';
 
-// tslint:disable-next-line:blank-lines
+// eslint-disable-next-line 
 import { GitClient } from '../../tools/release/git/git-client';
 
 import IssuesListCommentsParams = Octokit.IssuesListCommentsParams;
 import IssuesCreateCommentParams = Octokit.IssuesCreateCommentParams;
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 function getPrNumber(prNumber: string, circlePR: string): string {
     const PR_NUMBER = prNumber;
 

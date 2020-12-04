@@ -9,7 +9,7 @@ import {
 // Boilerplate for applying mixins to McTabLabelWrapper.
 /** @docs-private */
 export class McTabLabelWrapperBase {}
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McTabLabelWrapperMixinBase: CanDisableCtor &
     typeof McTabLabelWrapperBase = mixinDisabled(McTabLabelWrapperBase);
 

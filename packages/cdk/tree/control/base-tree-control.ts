@@ -5,7 +5,7 @@ import { TreeControl } from './tree-control';
 
 
 /** Base tree control. It has basic toggle/expand/collapse operations on a single data node. */
-/* tslint:disable-next-line:naming-convention */
+/* eslint-disable-next-line  */
 export abstract class BaseTreeControl<T> implements TreeControl<T> {
 
     dataNodes: T[];

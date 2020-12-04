@@ -62,7 +62,7 @@ export class McInputBase {
     ) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export const McInputMixinBase: CanUpdateErrorStateCtor & typeof McInputBase = mixinErrorState(McInputBase);
 
 
@@ -182,7 +182,7 @@ export class McInput extends McInputMixinBase implements McFormFieldControl<any>
 
     private _required = false;
 
-    // tslint:disable no-reserved-keywords
+    // eslint-disable
     /** Input type of the element. */
     @Input()
     get type(): string {
@@ -200,7 +200,7 @@ export class McInput extends McInputMixinBase implements McFormFieldControl<any>
             this.elementRef.nativeElement.type = this._type;
         }
     }
-    // tslint:enable no-reserved-keywords
+    // eslint-enable
 
     private _type = 'text';
 
@@ -220,10 +220,10 @@ export class McInput extends McInputMixinBase implements McFormFieldControl<any>
         }
     }
 
-    // tslint:disable-next-line: orthodox-getter-and-setter
+    // eslint-disable-next-line
     private _inputValueAccessor: { value: any };
 
-    // tslint:disable-next-line: naming-convention
+    // eslint-disable-next-line
     constructor(
         protected elementRef: ElementRef,
         @Optional() @Self() @Inject(NG_VALIDATORS) public rawValidators: Validator[],

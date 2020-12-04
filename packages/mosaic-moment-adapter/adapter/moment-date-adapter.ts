@@ -1,4 +1,4 @@
-// tslint:disable:no-magic-numbers
+/* eslint-disable no-magic-numbers */
 import { Inject, Injectable, InjectionToken, Optional } from '@angular/core';
 import {
     DateAdapter,
@@ -13,7 +13,7 @@ import * as MessageFormat from 'messageformat';
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
 // the `default as` syntax.
 import * as _moment from 'moment';
-// tslint:disable:no-duplicate-imports
+/* eslint-disable no-duplicate-imports */
 // @ts-ignore (look at tsconfig)
 import { default as _rollupMoment, Moment } from 'moment';
 import { unitOfTime } from 'moment';
@@ -47,7 +47,7 @@ export const MC_MOMENT_DATE_ADAPTER_OPTIONS = new InjectionToken<IMcMomentDateAd
     });
 
 /** @docs-private */
-// tslint:disable:naming-convention
+/* eslint-disable  */
 export function MC_MOMENT_DATE_ADAPTER_OPTIONS_FACTORY(): IMcMomentDateAdapterOptions {
     return {
         useUtc: false,
@@ -263,7 +263,7 @@ export class MomentDateAdapter extends DateAdapter<Moment> {
     }
 
     format(date: Moment, displayFormat: string): string {
-        // tslint:disable:no-parameter-reassignment
+        /* eslint-disable @typescript-eslint/no-param-reassign */
         date = this.clone(date);
         if (!this.isValid(date)) {
             throw Error('MomentDateAdapter: Cannot format invalid date.');
@@ -561,7 +561,7 @@ export class MomentDateAdapter extends DateAdapter<Moment> {
     private compileVariables(date: Moment, variables: any): any {
         const compiledVariables: any = {};
 
-        // tslint:disable-next-line:no-for-in
+        // eslint-disable-next-line no-restricted-syntax
         for (const key in variables) {
             if (!variables.hasOwnProperty(key)) {
                 continue;

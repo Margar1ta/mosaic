@@ -7,7 +7,7 @@ import { Constructor } from './constructor';
 
 
 /** @docs-private */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface CanUpdateErrorState {
 
     readonly stateChanges: Subject<void>;
@@ -22,7 +22,7 @@ export interface CanUpdateErrorState {
 export type CanUpdateErrorStateCtor = Constructor<CanUpdateErrorState>;
 
 /** @docs-private */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface HasErrorState {
     parentFormGroup: FormGroupDirective;
     parentForm: NgForm;

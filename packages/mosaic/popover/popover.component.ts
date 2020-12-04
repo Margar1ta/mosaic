@@ -172,7 +172,7 @@ export class McPopoverComponent {
     }
 
     handleKeydown(e: KeyboardEvent) {
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         if (this.isOpen && e.keyCode === ESCAPE) {
             this.hide();
         }
@@ -271,13 +271,13 @@ const VIEWPORT_MARGIN: number = 8;
 /* Constant distance between popover container border
 *  corner according to popover placement and middle of arrow
 * */
-const POPOVER_ARROW_BORDER_DISTANCE: number = 20; // tslint:disable-line
+const POPOVER_ARROW_BORDER_DISTANCE: number = 20; // eslint-disable-line
 
 /* Constant value for min height and width of anchor element used for popover.
 *  Set as POPOVER_ARROW_BORDER_DISTANCE multiplied by 2
 *  plus 2px border for both sides of element. Used in check of position management.
 * */
-const ANCHOR_MIN_HEIGHT_WIDTH: number = 44; // tslint:disable-line
+const ANCHOR_MIN_HEIGHT_WIDTH: number = 44; // eslint-disable-line
 
 @Directive({
     selector: '[mcPopover]',
@@ -595,8 +595,8 @@ export class McPopover implements OnInit, OnDestroy {
         const currentContainer = this.overlayRef.overlayElement.style;
         const elementHeight = this.hostView.element.nativeElement.clientHeight;
         const elementWidth = this.hostView.element.nativeElement.clientWidth;
-        const verticalOffset: number = Math.floor(elementHeight / 2); // tslint:disable-line
-        const horizontalOffset: number = Math.floor(elementWidth / 2 - 6); // tslint:disable-line
+        const verticalOffset: number = Math.floor(elementHeight / 2); // eslint-disable-line
+        const horizontalOffset: number = Math.floor(elementWidth / 2 - 6); // eslint-disable-line
         const offsets: { [key: string]: number} = {
             top: verticalOffset,
             bottom: verticalOffset,
@@ -622,7 +622,7 @@ export class McPopover implements OnInit, OnDestroy {
             offsets[styleProperty] - POPOVER_ARROW_BORDER_DISTANCE}px`;
     }
 
-    // tslint:disable-next-line:no-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     updateCompValue(key: string, value: any): void {
         if (this.isDynamicPopover && value) {
             if (this.popover) {
@@ -653,7 +653,7 @@ export class McPopover implements OnInit, OnDestroy {
     }
 
     handleKeydown(e: KeyboardEvent) {
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         if (this.isOpen && e.keyCode === ESCAPE) {
             this.hide();
         }

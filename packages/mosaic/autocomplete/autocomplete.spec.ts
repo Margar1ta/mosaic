@@ -1,11 +1,11 @@
-// tslint:disable:no-magic-numbers
-// tslint:disable:mocha-no-side-effect-code
-// tslint:disable:max-func-body-length
-// tslint:disable:no-inferred-empty-object-type
-// tslint:disable:chai-vague-errors
+/* eslint-disable no-magic-numbers */
+/* eslint-disable */
+/* eslint-disable  */
+/* eslint-disable */
+/* eslint-disable */
 
 // TODO: fixed linters
-// tslint:disable
+/* eslint-disable */
 import { Directionality } from '@angular/cdk/bidi';
 import { Overlay, OverlayContainer } from '@angular/cdk/overlay';
 import { ScrollDispatcher } from '@angular/cdk/scrolling';

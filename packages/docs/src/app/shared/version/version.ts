@@ -1,4 +1,4 @@
-/* tslint:disable:no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const packageJSON = require('../../../../../../package.json');
 
 
@@ -6,7 +6,7 @@ const packageJSON = require('../../../../../../package.json');
 export const mosaicVersion = packageJSON.version;
 
 /** Version information with title and redirect url */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface VersionInfo {
     url: string;
     title: string;

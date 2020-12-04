@@ -35,7 +35,7 @@ export class McListItem implements AfterContentInit {
     constructor(private elementRef: ElementRef) {}
 
     ngAfterContentInit() {
-        // tslint:disable-next-line:no-unused-expression
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         new McLineSetter(this.lines, this.elementRef);
     }
 

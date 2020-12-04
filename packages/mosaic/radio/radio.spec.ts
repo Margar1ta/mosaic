@@ -6,7 +6,7 @@ import { By } from '@angular/platform-browser';
 import { McRadioButton, McRadioGroup, McRadioModule } from './index';
 
 
-/* tslint:disable:no-magic-numbers */
+/* eslint-disable no-magic-numbers */
 describe('MсRadio', () => {
 
     beforeEach(waitForAsync(() => {

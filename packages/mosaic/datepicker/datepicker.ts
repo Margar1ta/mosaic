@@ -1,5 +1,5 @@
-// tslint:disable:no-unbound-method
-// tslint:disable:no-magic-numbers
+/* eslint-disable @typescript-eslint/unbound-method */
+/* eslint-disable no-magic-numbers */
 import { Directionality } from '@angular/cdk/bidi';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import {
@@ -49,7 +49,7 @@ export const MC_DATEPICKER_SCROLL_STRATEGY =
     new InjectionToken<() => ScrollStrategy>('mc-datepicker-scroll-strategy');
 
 /** @docs-private */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export function MC_DATEPICKER_SCROLL_STRATEGY_FACTORY(overlay: Overlay): () => ScrollStrategy {
     return () => overlay.scrollStrategies.reposition();
 }
@@ -421,7 +421,7 @@ export class McDatepicker<D> implements OnDestroy {
             this.popupRef.detachments(),
             this.popupRef.keydownEvents().pipe(filter((event) => {
                 // Closing on alt + up is only valid when there's an input associated with the datepicker.
-                // tslint:disable-next-line:deprecation
+                // eslint-disable-next-line import/no-deprecated
                 return event.keyCode === ESCAPE || (this.datepickerInput && event.altKey && event.keyCode === UP_ARROW);
             }))
         );

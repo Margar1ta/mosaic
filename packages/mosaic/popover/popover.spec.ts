@@ -8,9 +8,9 @@ import { dispatchMouseEvent, dispatchFakeEvent } from '@ptsecurity/cdk/testing';
 import { McPopoverModule } from './popover.module';
 
 
-// tslint:disable:no-magic-numbers
-// tslint:disable:max-line-length
-// tslint:disable:no-console
+/* eslint-disable no-magic-numbers */
+/* eslint-disable max-len */
+/* eslint-disable no-console */
 
 describe('McPopover', () => {
     let overlayContainer: OverlayContainer;
@@ -61,7 +61,7 @@ describe('McPopover', () => {
             expect(overlayContainerElement.textContent).toContain(expectedValue);
             // Move out from the tooltip element to hide it
             dispatchMouseEvent(overlayContainerElement, 'mouseleave');
-            tick(100); // tslint:disable-line
+            tick(100); // eslint-disable-line
             componentFixture.detectChanges();
             tick(); // wait for next tick to hide
             expect(overlayContainerElement.textContent).not.toEqual(expectedValue);
@@ -92,7 +92,7 @@ describe('McPopover', () => {
             componentFixture.detectChanges();
             expect(overlayContainerElement.textContent).toContain(featureKey);
             dispatchFakeEvent(triggerElement, 'blur');
-            tick(100); // tslint:disable-line
+            tick(100); // eslint-disable-line
             componentFixture.detectChanges();
             tick(); // wait for next tick to hide
             componentFixture.detectChanges();

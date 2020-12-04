@@ -25,7 +25,7 @@ import { McTabLabel } from './tab-label';
 
 
 export class McTabBase {}
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McTabMixinBase: CanDisableCtor & typeof McTabBase = mixinDisabled(McTabBase);
 
 @Component({

@@ -5,14 +5,14 @@ import {
 } from 'dgeni-packages/typescript/api-doc-types/ParameterContainer';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface NormalizedFunctionParameters {
     params?: FunctionParameterInfo[];
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface FunctionParameterInfo extends ParamTag {
-    // tslint:disable-next-line:no-reserved-keywords
+    // eslint-disable-next-line 
     type: string;
     isOptional: boolean;
 }
@@ -36,7 +36,7 @@ export type DefaultFunctionDoc = NormalizedFunctionParameters & ParameterContain
 export function normalizeFunctionParameters(doc: DefaultFunctionDoc) {
     if (doc.parameters) {
         doc.parameters.forEach((parameter) => {
-            // tslint:disable-next-line:prefer-const
+            // eslint-disable-next-line prefer-const
             let [parameterName, parameterType] = parameter.split(':');
 
             // If the parameter is optional, the name here will contain a '?'. We store whether the

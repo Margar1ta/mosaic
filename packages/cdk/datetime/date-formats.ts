@@ -1,7 +1,7 @@
 import { InjectionToken } from '@angular/core';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export interface McDateFormats {
     parse: {
         dateInput: any;

@@ -20,7 +20,7 @@ import { McTagTextControl } from './tag-text-control';
 
 
 /** Represents an input event on a `mcTagInput`. */
-// tslint:disable-next-line: naming-convention
+// eslint-disable-next-line
 export interface McTagInputEvent {
     /** The native `<input>` element that the event is being fired for. */
     input: HTMLInputElement;
@@ -84,7 +84,7 @@ export class McTagInput implements McTagTextControl, OnChanges {
         }
     }
 
-    // tslint:disable-next-line: naming-convention
+    // eslint-disable-next-line
     private _tagList: McTagList;
 
     /**
@@ -131,7 +131,7 @@ export class McTagInput implements McTagTextControl, OnChanges {
         @Inject(MC_TAGS_DEFAULT_OPTIONS) private defaultOptions: McTagsDefaultOptions,
         @Optional() @Self() public ngControl: NgControl
     ) {
-        // tslint:disable-next-line: no-unnecessary-type-assertion
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
         this.inputElement = this.elementRef.nativeElement as HTMLInputElement;
 
         this.setDefaultInputWidth();
@@ -163,7 +163,7 @@ export class McTagInput implements McTagTextControl, OnChanges {
             this._tagList.blur();
         }
 
-        // tslint:disable-next-line: no-unnecessary-type-assertion
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
         if (this.addOnBlur) {
             this.emitTagEnd();
         }
@@ -271,7 +271,7 @@ export class McTagInput implements McTagTextControl, OnChanges {
     private isSeparatorKey(event: KeyboardEvent) {
         if (hasModifierKey(event)) { return false; }
 
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         return this.separatorKeyCodes.indexOf(event.keyCode) > -1;
     }
 }

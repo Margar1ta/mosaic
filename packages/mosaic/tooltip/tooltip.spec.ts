@@ -41,7 +41,7 @@ describe('McTooltip', () => {
             // Move inside to trigger tooltip shown up
             dispatchMouseEvent(triggerElement, 'mouseenter');
             fixture.detectChanges();
-            tick(410); // tslint:disable-line
+            tick(410); // eslint-disable-line
             fixture.detectChanges();
             tick();
             fixture.detectChanges();
@@ -57,7 +57,7 @@ describe('McTooltip', () => {
             expect(overlayContainerElement.textContent).toContain(featureKey);
             // Move out from the tooltip element to hide it
             dispatchMouseEvent(overlayElement, 'mouseleave');
-            tick(100); // tslint:disable-line
+            tick(100); // eslint-disable-line
             fixture.detectChanges();
             tick(); // wait for next tick to hide
             expect(overlayContainerElement.textContent).not.toContain(featureKey);
@@ -70,14 +70,14 @@ describe('McTooltip', () => {
             // Move inside to trigger tooltip shown up
             dispatchMouseEvent(triggerElement, 'mouseenter');
             fixture.detectChanges();
-            tick(410); // tslint:disable-line
+            tick(410); // eslint-disable-line
             fixture.detectChanges();
             tick();
             fixture.detectChanges();
             expect(overlayContainerElement.textContent).toContain(featureKey);
             // Move out from the trigger element to hide it
             dispatchMouseEvent(triggerElement, 'mouseleave');
-            tick(100); // tslint:disable-line
+            tick(100); // eslint-disable-line
             fixture.detectChanges();
             tick(); // wait for next tick to hide
             expect(overlayContainerElement.textContent).not.toContain(featureKey);
@@ -89,7 +89,7 @@ describe('McTooltip', () => {
             fixture.detectChanges();
             expect(overlayContainerElement.textContent).toContain(featureKey);
             dispatchMouseEvent(triggerElement, 'blur');
-            tick(100); // tslint:disable-line
+            tick(100); // eslint-disable-line
             fixture.detectChanges();
             tick(); // wait for next tick to hide
             expect(overlayContainerElement.textContent).not.toContain(featureKey);
@@ -102,7 +102,7 @@ describe('McTooltip', () => {
             // Move inside to trigger tooltip shown up
             dispatchMouseEvent(triggerElement, 'mouseenter');
             fixture.detectChanges();
-            tick(410); // tslint:disable-line
+            tick(410); // eslint-disable-line
             fixture.detectChanges();
             tick();
             fixture.detectChanges();
@@ -118,7 +118,7 @@ describe('McTooltip', () => {
             expect(overlayContainerElement.textContent).toContain(featureKey);
             // Move out from the tooltip element to hide it
             dispatchMouseEvent(overlayElement, 'mouseleave');
-            tick(100); // tslint:disable-line
+            tick(100); // eslint-disable-line
             fixture.detectChanges();
             tick(); // wait for next tick to hide
             expect(overlayContainerElement.textContent).not.toContain(featureKey);
@@ -143,15 +143,15 @@ describe('McTooltip', () => {
             expect(overlayContainerElement.textContent).not.toContain(featureKey);
             tooltipDirective.show();
             fixture.detectChanges();
-            tick(410); // tslint:disable-line
+            tick(410); // eslint-disable-line
             fixture.detectChanges();
             expect(overlayContainerElement.textContent).not.toContain(featureKey);
             tooltipDirective.disabled = false;
             tooltipDirective.show();
             fixture.detectChanges();
-            tick(410); // tslint:disable-line
+            tick(410); // eslint-disable-line
             fixture.detectChanges();
-            tick(410); // tslint:disable-line
+            tick(410); // eslint-disable-line
             tick();
             fixture.detectChanges();
             expect(overlayContainerElement.textContent).toContain(featureKey);

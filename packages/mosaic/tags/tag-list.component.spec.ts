@@ -1,6 +1,6 @@
-/* tslint:disable:no-magic-numbers no-empty */
-// tslint:disable:mocha-no-side-effect-code
-// tslint:disable:max-func-body-length
+/* eslint-disable no-magic-numbers, no-empty,@typescript-eslint/no-empty-function */
+/* eslint-disable  */
+/* eslint-disable  */
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Directionality, Direction } from '@angular/cdk/bidi';
 import {

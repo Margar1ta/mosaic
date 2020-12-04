@@ -1,4 +1,4 @@
-/* tslint:disable:no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
 import { Dgeni } from 'dgeni';
 import { task, src, dest, series } from 'gulp';
 import * as path from 'path';
@@ -88,7 +88,7 @@ task('api-docs', () => {
     const docs = new Dgeni([apiDocsPackageConfig]);
 
     return docs.generate().catch((e: any) => {
-        // tslint:disable-next-line:no-console
+        // eslint-disable-next-line no-console
         console.error(e);
         process.exit(1);
     });
@@ -97,7 +97,7 @@ task('api-docs', () => {
 task('markdown-docs-mosaic', () => {
 
     markdown.marked.Renderer.prototype.heading = (text: string, level: number): string => {
-        // tslint:disable-next-line:no-magic-numbers
+        // eslint-disable-next-line no-magic-numbers
         if (level === 3 || level === 4) {
             const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
 

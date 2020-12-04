@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
  * The CDKTree will use this TreeControl to expand/collapse a node.
  * User can also use it outside the `<cdk-tree>` to control the expansion status of the tree.
  */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export interface TreeControl<T> {
     /** The saved tree nodes data for `expandAll` action. */
     dataNodes: T[];

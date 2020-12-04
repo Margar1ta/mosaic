@@ -27,11 +27,11 @@ export class McCommonModule {
     private hasDoneGlobalChecks = false;
 
     // Reference to the global `document` object.
-    // tslint:disable-next-line: orthodox-getter-and-setter
+    // eslint-disable-next-line
     private _document = typeof document === 'object' && document ? document : null;
 
     // Reference to the global 'window' object.
-    // tslint:disable-next-line: orthodox-getter-and-setter
+    // eslint-disable-next-line
     private _window = typeof window === 'object' && window ? window : null;
 
     constructor(@Optional() @Inject(MC_SANITY_CHECKS) private _sanityChecksEnabled: boolean) {
@@ -49,7 +49,7 @@ export class McCommonModule {
 
     // Whether the code is running in tests.
     private isTestEnv() {
-        // tslint:disable-next-line
+        // eslint-disable-next-line
         return this._window && (this._window['__karma__'] || this._window['jasmine']);
     }
 

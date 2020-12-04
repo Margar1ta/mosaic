@@ -24,14 +24,14 @@ export class CdkTreeNodePadding<T> implements OnDestroy {
     get level(): number { return this._level; }
     set level(value: number) { this.setLevelInput(value); }
 
-    /* tslint:disable-next-line:naming-convention orthodox-getter-and-setter */
+    /* eslint-disable-next-line ,  */
     _level: number;
 
     @Input('cdkTreeNodePaddingIndent')
     get indent(): number | string { return this._indent; }
     set indent(indent: number | string) { this.setIndentInput(indent); }
 
-    /* tslint:disable-next-line:naming-convention orthodox-getter-and-setter */
+    /* eslint-disable-next-line  */
     _indent: number = 20;
 
     /** CSS units used for the indentation value. */
@@ -65,7 +65,7 @@ export class CdkTreeNodePadding<T> implements OnDestroy {
      * TS 4.0 doesn't allow properties to override accessors or vice-versa.
      * @docs-private
      */
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     protected setLevelInput(value: number) {
         // Set to null as the fallback value so that _setPadding can fall back to the node level if the
         // consumer set the directive as `cdkTreeNodePadding=""`. We still want to take this value if

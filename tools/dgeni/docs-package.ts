@@ -1,5 +1,5 @@
-/* tslint:disable:no-var-requires no-function-expression only-arrow-functions */
-// tslint:disable:no-invalid-template-strings
+/* eslint-disable @typescript-eslint/no-var-requires, , prefer-arrow/prefer-arrow-functions */
+/* eslint-disable no-template-curly-in-string */
 import { Package } from 'dgeni';
 import { ReadTypeScriptModules } from 'dgeni-packages/typescript/processors/readTypeScriptModules';
 import { Host } from 'dgeni-packages/typescript/services/ts-host/host';

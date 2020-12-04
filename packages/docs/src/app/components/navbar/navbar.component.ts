@@ -137,7 +137,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
                     }
                 });
             } catch (errSafari) {
-                // tslint:disable-next-line:no-console
+                // eslint-disable-next-line no-console
                 console.error(errSafari);
             }
         }

@@ -80,14 +80,14 @@ export class DocViewer implements OnDestroy {
         // Replace all relative fragment URLs with absolute fragment URLs. e.g. "#my-section" becomes
         // "/components/button/api#my-section". This is necessary because otherwise these fragment
         // links would redirect to "/#my-section".
-        // tslint:disable-next-line:no-parameter-reassignment
+        // eslint-disable-next-line @typescript-eslint/no-param-reassign
         rawDocument = rawDocument.replace(/href="#([^"]*)"/g, (_m: string, fragmentUrl: string) => {
             const absoluteUrl = `${location.pathname}#${fragmentUrl}`;
 
             return `href="${this._domSanitizer.sanitize(SecurityContext.URL, absoluteUrl)}"`;
         });
 
-        // tslint:disable-next-line:no-inner-html
+        // eslint-disable-next-line
         this._elementRef.nativeElement.innerHTML = rawDocument;
         this.textContent = this._elementRef.nativeElement.textContent;
 
@@ -103,7 +103,7 @@ export class DocViewer implements OnDestroy {
 
     /** Show an error that occurred when fetching a document. */
     private showError(url: string, error: HttpErrorResponse) {
-        // tslint:disable-next-line:no-console
+        // eslint-disable-next-line no-console
         console.error(error);
         this._elementRef.nativeElement.innerText =
             `Failed to load document: ${url}. Error: ${error.statusText}`;

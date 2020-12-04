@@ -1,5 +1,5 @@
-/* tslint:disable:naming-convention */
-// tslint:disable:no-console
+/* eslint-disable  */
+/* eslint-disable no-console */
 import { Component, Inject, Input, NgModule, Optional, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';

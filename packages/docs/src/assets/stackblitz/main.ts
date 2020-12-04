@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MosaicDocsExample } from './app/mosaic-docs-example';
 import { DemoMosaicModule } from './mosaic-module';
-// tslint:disable-next-line:no-import-side-effect
+// eslint-disable-next-line import/no-unassigned-import
 import './polyfills';
 
 

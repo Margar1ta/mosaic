@@ -1,4 +1,4 @@
-// tslint:disable:no-magic-numbers
+/* eslint-disable no-magic-numbers */
 import {
     ChangeDetectionStrategy,
     Component,
@@ -103,7 +103,7 @@ export class McCalendarBody implements OnChanges {
 
     ngOnChanges(changes: SimpleChanges) {
         const columnChanges = changes.numCols;
-        // tslint:disable-next-line:no-this-assignment
+        // eslint-disable-next-line @typescript-eslint/no-this-alias
         const { rows, numCols } = this;
 
         if (changes.rows || columnChanges) {

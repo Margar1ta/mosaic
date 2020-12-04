@@ -1,4 +1,4 @@
-// tslint:disable:no-magic-numbers
+/* eslint-disable no-magic-numbers */
 import { Direction, Directionality } from '@angular/cdk/bidi';
 import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
 import {

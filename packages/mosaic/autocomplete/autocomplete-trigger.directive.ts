@@ -60,7 +60,7 @@ export const AUTOCOMPLETE_BORDER_WIDTH: number = 2;
 export const MC_AUTOCOMPLETE_SCROLL_STRATEGY =
     new InjectionToken<() => ScrollStrategy>('mc-autocomplete-scroll-strategy');
 
-// tslint:disable-next-line naming-convention
+// eslint-disable-next-line  
 export function MC_AUTOCOMPLETE_SCROLL_STRATEGY_FACTORY(overlay: Overlay): () => ScrollStrategy {
     return () => overlay.scrollStrategies.reposition();
 }
@@ -210,7 +210,7 @@ export class McAutocompleteTrigger implements ControlValueAccessor, OnDestroy {
         // @breaking-change 8.0.0 Make `_viewportRuler` required.
         private viewportRuler?: ViewportRuler
     ) {
-        // tslint:disable-next-line no-typeof-undefined
+        // eslint-disable-next-line  
         if (typeof window !== 'undefined') {
             zone.runOutsideAngular(() => {
                 window.addEventListener('blur', this.windowBlurHandler);
@@ -221,7 +221,7 @@ export class McAutocompleteTrigger implements ControlValueAccessor, OnDestroy {
     }
 
     ngOnDestroy() {
-        // tslint:disable-next-line no-typeof-undefined
+        // eslint-disable-next-line  
         if (typeof window !== 'undefined') {
             window.removeEventListener('blur', this.windowBlurHandler);
         }
@@ -233,11 +233,11 @@ export class McAutocompleteTrigger implements ControlValueAccessor, OnDestroy {
     }
 
     /** `View -> model callback called when value changes` */
-    // tslint:disable-next-line no-empty
+    // eslint-disable-next-line  no-empty,@typescript-eslint/no-empty-function
     onChange: (value: any) => void = () => {};
 
     /** `View -> model callback called when autocomplete has been touched` */
-    // tslint:disable-next-line no-empty
+    // eslint-disable-next-line  no-empty, @typescript-eslint/no-empty-function
     onTouched: () => void = () => {};
 
     /** Opens the autocomplete suggestion panel. */
@@ -320,7 +320,7 @@ export class McAutocompleteTrigger implements ControlValueAccessor, OnDestroy {
     }
 
     handleKeydown(event: KeyboardEvent): void {
-        // tslint:disable-next-line deprecation
+        // eslint-disable-next-line  import/no-deprecated
         const keyCode = event.keyCode;
 
         // Prevent the default action on all escape key presses. This is here primarily to bring IE
@@ -394,9 +394,9 @@ export class McAutocompleteTrigger implements ControlValueAccessor, OnDestroy {
     /** Stream of clicks outside of the autocomplete panel. */
     private getOutsideClickStream(): Observable<any> {
         return merge(
-            // tslint:disable-next-line: no-unnecessary-type-assertion
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
             fromEvent(this.document, 'click') as Observable<MouseEvent>,
-            // tslint:disable-next-line: no-unnecessary-type-assertion
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
             fromEvent(this.document, 'touchend') as Observable<TouchEvent>
         )
             .pipe(filter((event) => {
@@ -566,7 +566,7 @@ export class McAutocompleteTrigger implements ControlValueAccessor, OnDestroy {
             overlayRef.keydownEvents().subscribe((event) => {
                 // Close when pressing ESCAPE or ALT + UP_ARROW, based on the a11y guidelines.
                 // See: https://www.w3.org/TR/wai-aria-practices-1.1/#textbox-keyboard-interaction
-                // tslint:disable-next-line deprecation
+                // eslint-disable-next-line  import/no-deprecated
                 if (event.keyCode === ESCAPE || (event.keyCode === UP_ARROW && event.altKey)) {
                     this.resetActiveItem();
                     this.closeKeyEventStream.next();

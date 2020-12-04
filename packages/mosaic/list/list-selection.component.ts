@@ -1,4 +1,4 @@
-/* tslint:disable:no-empty */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { SelectionModel } from '@angular/cdk/collections';
 import {
@@ -52,7 +52,7 @@ import { merge, Observable, Subject, Subscription } from 'rxjs';
 import { startWith, take, takeUntil } from 'rxjs/operators';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export interface McOptionEvent {
     option: McListOption;
 }
@@ -293,7 +293,7 @@ export class McListSelectionBase {
     constructor(public elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export const McListSelectionMixinBase: CanDisableCtor & HasTabIndexCtor & typeof McListSelectionBase
     = mixinTabIndex(mixinDisabled(McListSelectionBase));
 
@@ -387,7 +387,7 @@ export class McListSelection extends McListSelectionMixinBase implements CanDisa
         return merge(...this.options.map((option) => option.onBlur));
     }
 
-    // tslint:disable-next-line:orthodox-getter-and-setter naming-convention
+    // eslint-disable-next-line
     _value: string[] | null;
 
     /** Emits whenever the component is destroyed. */
@@ -628,7 +628,7 @@ export class McListSelection extends McListSelectionMixinBase implements CanDisa
     }
 
     // View to model callback that should be called if the list or its options lost focus.
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     onTouched: () => void = () => {};
 
     // Removes an option from the selection list and updates the active item.
@@ -646,7 +646,7 @@ export class McListSelection extends McListSelectionMixinBase implements CanDisa
     }
 
     onKeyDown(event: KeyboardEvent) {
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         const keyCode = event.keyCode;
 
         switch (keyCode) {

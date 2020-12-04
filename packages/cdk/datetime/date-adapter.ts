@@ -10,7 +10,7 @@ export const MC_DATE_LOCALE = new InjectionToken<string>('MC_DATE_LOCALE', {
 });
 
 /** @docs-private */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export function MC_DATE_LOCALE_FACTORY(): string {
     return inject(LOCALE_ID);
 }
@@ -50,7 +50,7 @@ export interface IFormatterRelativeTemplate {
 }
 
 /** Adapts type `D` to be usable as a date by cdk-based components that work with dates. */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export abstract class DateAdapter<D> {
     /** The locale to use for all dates. */
     protected locale: any;

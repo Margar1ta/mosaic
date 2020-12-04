@@ -59,7 +59,7 @@ export class McTagListBase {
     ) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export const McTagListMixinBase: CanUpdateErrorStateCtor & typeof McTagListBase = mixinErrorState(McTagListBase);
 
 
@@ -448,10 +448,10 @@ export class McTagList extends McTagListMixinBase implements McFormFieldControl<
         this.dropSubscriptions();
     }
 
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     onTouched = () => {};
 
-    // tslint:disable-next-line:no-empty
+    // eslint-disable-next-line no-empty,@typescript-eslint/no-empty-function
     onChange: (value: any) => void = () => {};
 
     /** Associates an HTML input element with this tag list. */
@@ -532,16 +532,16 @@ export class McTagList extends McTagListMixinBase implements McFormFieldControl<
         const target = event.target as HTMLElement;
 
         // If they are on an empty input and hit backspace, focus the last tag
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         if (event.keyCode === BACKSPACE && this.isInputEmpty(target)) {
             this.keyManager.setLastItemActive();
             event.preventDefault();
         } else if (target && target.classList.contains('mc-tag')) {
-            // tslint:disable-next-line: deprecation
+            // eslint-disable-next-line import/no-deprecated
             if (event.keyCode === HOME) {
                 this.keyManager.setFirstItemActive();
                 event.preventDefault();
-            // tslint:disable-next-line: deprecation
+            // eslint-disable-next-line import/no-deprecated
             } else if (event.keyCode === END) {
                 this.keyManager.setLastItemActive();
                 event.preventDefault();

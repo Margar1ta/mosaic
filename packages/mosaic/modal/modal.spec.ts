@@ -9,11 +9,11 @@ import { McModalModule } from './modal.module';
 import { McModalService } from './modal.service';
 
 
-// tslint:disable:no-magic-numbers
-// tslint:disable:max-line-length
-// tslint:disable:no-console
-// tslint:disable:no-empty
-// tslint:disable:no-unnecessary-class
+/* eslint-disable no-magic-numbers */
+/* eslint-disable max-len */
+/* eslint-disable no-console */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-extraneous-class */
 describe('McModal', () => {
     let modalService: McModalService;
     let overlayContainer: OverlayContainer;

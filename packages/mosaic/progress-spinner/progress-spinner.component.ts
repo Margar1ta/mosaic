@@ -16,11 +16,11 @@ const MIN_PERCENT = 0;
 const MAX_PERCENT = 100;
 
 export class McProgressSpinnerBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McProgressSpinnerMixinBase:
     CanColorCtor & typeof McProgressSpinnerBase = mixinColor(McProgressSpinnerBase, ThemePalette.Primary);
 

@@ -1,4 +1,4 @@
-// tslint:disable
+/* eslint-disable */
 import { Migration, TargetVersion } from '@angular/cdk/schematics';
 import * as ts from 'typescript';
 
@@ -17,11 +17,11 @@ const MOSAIC_AC_FILEPATH_REGEX = new RegExp(
     `${legacyMosaicModuleSpecifier}/(.*?)/`
 );
 
-// tslint:disable-next-line:no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const ENTRY_POINT_MAPPINGS: {[name: string]: string} = require('./mosaic-symbols.json');
 
 
-// tslint:disable-next-line:no-null-keyword
+// eslint-disable-next-line no-null/no-null
 export class SecondaryEntryPointsMigration extends Migration<null> {
 
     printer = ts.createPrinter();
@@ -29,7 +29,7 @@ export class SecondaryEntryPointsMigration extends Migration<null> {
     // Only enable this rule if the migration targets version 8.
     enabled = this.targetVersion === TargetVersion.V8 || this.targetVersion === TargetVersion.V9;
 
-    // tslint:disable-next-line:max-func-body-length
+    // eslint-disable-next-line 
     visitNode(declaration: ts.Node): void {
 
         if (
@@ -79,7 +79,7 @@ export class SecondaryEntryPointsMigration extends Migration<null> {
             const elementName = element.propertyName ? element.propertyName : element.name;
 
             const moduleName = resolveModuleName(elementName, this.typeChecker) ||
-                // tslint:disable-next-line:no-null-keyword
+                // eslint-disable-next-line no-null/no-null
                 ENTRY_POINT_MAPPINGS[elementName.text] || null;
 
             if (!moduleName) {
@@ -148,19 +148,19 @@ export class SecondaryEntryPointsMigration extends Migration<null> {
 function createStringLiteral(text: string, singleQuotes: boolean): ts.StringLiteral {
     const literal = ts.createStringLiteral(text);
     // See: https://github.com/microsoft/TypeScript/blob/master/src/compiler/utilities.ts#L584-L590
-    // tslint:disable-next-line: no-string-literal
+    // eslint-disable-next-line @typescript-eslint/dot-notation
     literal['singleQuote'] = singleQuotes;
 
     return literal;
 }
 
 function getDeclarationSymbolOfNode(node: ts.Node, checker: ts.TypeChecker): ts.Symbol | undefined {
-    // tslint:disable-next-line:no-reserved-keywords
+    // eslint-disable-next-line 
     const symbol = checker.getSymbolAtLocation(node);
 
     // Symbols can be aliases of the declaration symbol. e.g. in named import specifiers.
     // We need to resolve the aliased symbol back to the declaration symbol.
-    // tslint:disable-next-line:no-bitwise
+    // eslint-disable-next-line no-bitwise
     if (symbol && (symbol.flags & ts.SymbolFlags.Alias) !== 0) {
         return checker.getAliasedSymbol(symbol);
     }
@@ -173,14 +173,14 @@ function resolveModuleName(node: ts.Identifier, typeChecker: ts.TypeChecker) {
     // value declaration based on the type of the element as types are not necessarily
     // specific to a given secondary entry-point (e.g. exports with the type of "string")
     // would resolve to the module types provided by TypeScript itself.
-    // tslint:disable-next-line:no-reserved-keywords
+    // eslint-disable-next-line 
     const symbol = getDeclarationSymbolOfNode(node, typeChecker);
 
     // If the symbol can't be found, or no declaration could be found within
     // the symbol, add failure to report that the given symbol can't be found.
     if (!symbol ||
         !(symbol.valueDeclaration || (symbol.declarations && symbol.declarations.length !== 0))) {
-        // tslint:disable-next-line:no-null-keyword
+        // eslint-disable-next-line no-null/no-null
         return null;
     }
 
@@ -195,6 +195,6 @@ function resolveModuleName(node: ts.Identifier, typeChecker: ts.TypeChecker) {
     // elements are analyzed.
     const matches = sourceFile.match(MOSAIC_AC_FILEPATH_REGEX);
 
-    // tslint:disable-next-line:no-null-keyword
+    // eslint-disable-next-line no-null/no-null
     return matches ? matches[1] : null;
 }

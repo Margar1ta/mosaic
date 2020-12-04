@@ -1,4 +1,4 @@
-// tslint:disable:no-magic-numbers
+/* eslint-disable no-magic-numbers */
 import { Direction, Directionality } from '@angular/cdk/bidi';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
@@ -25,14 +25,14 @@ import { McMonthView } from './month-view';
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
 // the `default as` syntax.
-// tslint:disable-next-line:ordered-imports
+// eslint-disable-next-line import/order
 import * as _moment from 'moment';
 // @ts-ignore
-// tslint:disable-next-line:no-duplicate-imports
+// eslint-disable-next-line no-duplicate-imports
 import { default as _rollupMoment, Moment } from 'moment';
 
 
-// tslint:disable-next-line
+// eslint-disable-next-line
 const moment = _rollupMoment || _moment;
 
 

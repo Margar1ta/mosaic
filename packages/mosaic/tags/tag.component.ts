@@ -31,7 +31,7 @@ import { Subject } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export interface McTagEvent {
     tag: McTag;
 }
@@ -65,11 +65,11 @@ export class McTagAvatar {}
 export class McTagTrailingIcon {}
 
 export class McTagBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export const McTagMixinBase: CanColorCtor & CanDisableCtor & typeof McTagBase = mixinColor(mixinDisabled(McTagBase));
 
 
@@ -344,7 +344,7 @@ export class McTag extends McTagMixinBase implements IFocusableOption, OnDestroy
     handleKeydown(event: KeyboardEvent): void {
         if (this.disabled) { return; }
 
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         switch (event.keyCode) {
             case DELETE:
             case BACKSPACE:

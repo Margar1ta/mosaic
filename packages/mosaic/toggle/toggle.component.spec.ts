@@ -1,5 +1,5 @@
-// tslint:disable:no-magic-numbers
-// tslint:disable:no-empty
+/* eslint-disable no-magic-numbers */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 import { Component, DebugElement, ViewChild } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, flush } from '@angular/core/testing';
 import { FormControl, FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';

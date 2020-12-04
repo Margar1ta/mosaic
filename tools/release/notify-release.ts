@@ -33,7 +33,7 @@ export function notify(tag, version) {
         body: JSON.stringify(body)
     }, (error, response) => {
         if (error || response.statusCode !== HTTP_CODE_OK) {
-            // tslint:disable-next-line:no-console
+            // eslint-disable-next-line no-console
             console.error(red(`  ✘   Could not post notification in Mattermost.`));
 
             return;

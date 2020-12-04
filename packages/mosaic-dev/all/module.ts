@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -37,10 +37,10 @@ import { buildFileTree, FileFlatNode, FileNode, DATA_OBJECT } from '../tree/modu
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
 // the `default as` syntax.
-// tslint:disable-next-line:ordered-imports
+// eslint-disable-next-line import/order
 import * as _moment from 'moment';
 // @ts-ignore
-// tslint:disable-next-line:no-duplicate-imports
+// eslint-disable-next-line no-duplicate-imports
 import { default as _rollupMoment, Moment } from 'moment';
 
 

@@ -1,4 +1,4 @@
-/* tslint:disable:no-parameter-reassignment */
+/* eslint-disable @typescript-eslint/no-param-reassign */
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ExampleData } from '@ptsecurity/mosaic-examples';
@@ -149,7 +149,7 @@ export class StackblitzWriter {
              prependApp = true): void {
         this._http.get(path + filename, {responseType: 'text'}).subscribe(
             (response) => this.addFileToForm(form, data, response, filename, path, prependApp),
-            // tslint:disable-next-line:no-console
+            // eslint-disable-next-line no-console
             (error) => console.log(error)
         );
     }
@@ -172,7 +172,7 @@ export class StackblitzWriter {
         if (path === TEMPLATE_PATH) {
             content = this.replaceExamplePlaceholderNames(data, filename, content);
         } else if (prependApp) {
-            // tslint:disable-next-line:prefer-template
+            // eslint-disable-next-line prefer-template
             filename = 'app/' + filename;
         }
         this.appendFormInput(form, `files[${filename}]`, this.appendCopyright(filename, content));

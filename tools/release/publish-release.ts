@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { green, red, yellow, bold, italic } from 'chalk';
 import { execSync, ExecSyncOptions } from 'child_process';
 import { readFileSync } from 'fs';

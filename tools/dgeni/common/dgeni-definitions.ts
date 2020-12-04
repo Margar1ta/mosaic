@@ -10,7 +10,7 @@ import { ParsedDecorator } from 'dgeni-packages/typescript/services/TsParser/get
 import { NormalizedFunctionParameters } from './normalize-function-parameters';
 
 
-// tslint:disable:naming-convention
+/* eslint-disable  */
 /** Interface that describes categorized docs that can be deprecated. */
 export interface DeprecationInfo {
     isDeprecated: boolean;

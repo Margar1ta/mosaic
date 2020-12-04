@@ -6,13 +6,13 @@ import { ThemePalette } from '@ptsecurity/mosaic/core';
 import { McProgressSpinnerModule } from './index';
 
 
-// tslint:disable no-magic-numbers
+/* eslint-disable  no-magic-numbers */
 const percentPairs = [
     [40, 0.4],
     [-50, 0],
     [140, 1]
 ];
-// tslint:enable no-magic-numbers
+// eslint-enable  no-magic-numbers
 
 describe('McProgressSpinner', () => {
     beforeEach(fakeAsync(() => {

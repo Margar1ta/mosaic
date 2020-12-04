@@ -1,4 +1,4 @@
-/* tslint:disable */
+/* eslint-disable */
 import { Component, Provider, Type } from '@angular/core';
 import {
     ComponentFixture,

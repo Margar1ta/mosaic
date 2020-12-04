@@ -4,7 +4,7 @@ import { createTestCaseSetup } from '../../../testing';
 
 
 /** Path to the schematic collection that includes the migrations. */
-// tslint:disable-next-line:mocha-no-side-effect-code
+// eslint-disable-next-line 
 const migrationCollection = require.resolve('../../../migration.json');
 
 describe('v9 Mosaic imports', () => {

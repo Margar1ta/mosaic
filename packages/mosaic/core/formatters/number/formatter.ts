@@ -1,4 +1,4 @@
-/* tslint:disable:naming-convention */
+/* eslint-disable  */
 import { Inject, Injectable, InjectionToken, Optional, Pipe, PipeTransform } from '@angular/core';
 
 

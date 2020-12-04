@@ -1,4 +1,4 @@
-// tslint:disable:no-console
+/* eslint-disable no-console */
 import { red, italic, yellow, green } from 'chalk';
 import { prompt } from 'inquirer';
 

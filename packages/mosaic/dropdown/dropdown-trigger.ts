@@ -41,7 +41,7 @@ export const MC_DROPDOWN_SCROLL_STRATEGY =
     new InjectionToken<() => ScrollStrategy>('mc-dropdown-scroll-strategy');
 
 /** @docs-private */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export function MC_DROPDOWN_SCROLL_STRATEGY_FACTORY(overlay: Overlay): () => ScrollStrategy {
     return () => overlay.scrollStrategies.reposition();
 }
@@ -179,7 +179,7 @@ export class McDropdownTrigger implements AfterContentInit, OnDestroy {
 
     /** Toggles the dropdown between the open and closed states. */
     toggle(): void {
-        // tslint:disable-next-line:no-void-expression
+        // eslint-disable-next-line no-void
         return this._opened ? this.close() : this.open();
     }
 
@@ -244,7 +244,7 @@ export class McDropdownTrigger implements AfterContentInit, OnDestroy {
 
     /** Handles key presses on the trigger. */
     handleKeydown(event: KeyboardEvent): void {
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         const keyCode = event.key || event.keyCode;
 
         if (keyCode === SPACE || keyCode === ENTER) {
@@ -349,7 +349,7 @@ export class McDropdownTrigger implements AfterContentInit, OnDestroy {
     // set state rather than toggle to support triggers sharing a dropdown
     private setIsOpened(isOpen: boolean): void {
         this._opened = isOpen;
-        // tslint:disable-next-line:no-void-expression
+        // eslint-disable-next-line no-void
         this._opened ? this.dropdownOpened.emit() : this.dropdownClosed.emit();
 
         if (this.triggersNestedDropdown()) {
@@ -429,7 +429,7 @@ export class McDropdownTrigger implements AfterContentInit, OnDestroy {
                 ['end', 'start', 'end', 'start'] :
                 ['start', 'end', 'start', 'end'];
 
-        // tslint:disable-next-line:prefer-const
+        // eslint-disable-next-line prefer-const
         let [overlayY, overlayFallbackY, originY, originFallbackY]: VerticalConnectionPos[] =
             this.dropdown.yPosition === 'above' ?
                 ['bottom', 'top', 'bottom', 'top'] :

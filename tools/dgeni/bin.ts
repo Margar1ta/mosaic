@@ -1,4 +1,4 @@
-/* tslint:disable:no-shadowed-variable no-unnecessary-callback-wrapper */
+/* eslint-disable no-shadow */
 import { ReadTypeScriptModules } from 'dgeni-packages/typescript/processors/readTypeScriptModules';
 import { TsParser } from 'dgeni-packages/typescript/services/TsParser';
 import { sync as globSync } from 'glob';

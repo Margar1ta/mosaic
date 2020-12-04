@@ -1,10 +1,10 @@
-// tslint:disable:no-magic-numbers
-// tslint:disable:no-unbound-method
-// tslint:disable:no-typeof-undefined
-// tslint:disable:no-empty
+/* eslint-disable no-magic-numbers */
+/* eslint-disable @typescript-eslint/unbound-method */
+/* eslint-disable  */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 
 // TODO: fix linter
-// tslint:disable
+/* eslint-disable */
 import { Directionality } from '@angular/cdk/bidi';
 import { Overlay, OverlayContainer } from '@angular/cdk/overlay';
 import { ScrollDispatcher } from '@angular/cdk/scrolling';
@@ -34,14 +34,14 @@ import { McDatepickerInput } from './datepicker-input';
 import { McDatepickerToggle } from './datepicker-toggle';
 import { MC_DATEPICKER_SCROLL_STRATEGY, McDatepickerIntl, McDatepickerModule } from './index';
 
-// tslint:disable-next-line:ordered-imports
+// eslint-disable-next-line import/order
 import * as _moment from 'moment';
 // @ts-ignore
-// tslint:disable-next-line:no-duplicate-imports
+// eslint-disable-next-line no-duplicate-imports
 import { default as _rollupMoment, Moment } from 'moment';
 
 
-// tslint:disable-next-line
+// eslint-disable-next-line
 const moment = _rollupMoment || _moment;
 
 describe('McDatepicker', () => {
@@ -308,7 +308,7 @@ describe('McDatepicker', () => {
                     oldOverlayContainer.ngOnDestroy();
                     TestBed.resetTestingModule();
 
-                    // tslint:disable-next-line:no-inferred-empty-object-type
+                    // eslint-disable-next-line 
                     const scrolledSubject = new Subject();
 
                     // Stub out a `CloseScrollStrategy` so we can trigger a detachment via the `OverlayRef`.
@@ -1538,7 +1538,7 @@ class DatepickerWithi18n {
         <mc-datepicker #d [startAt]="startAt"></mc-datepicker>
     `
 })
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 class DatepickerWithISOStrings {
     value = new Date(2017, 5, 1).toISOString();
     min = new Date(2017, 0, 1).toISOString();

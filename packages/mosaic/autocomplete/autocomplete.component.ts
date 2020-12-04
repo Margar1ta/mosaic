@@ -31,7 +31,7 @@ export class McAutocompleteSelectedEvent {
 }
 
 /** Default `mc-autocomplete` options that can be overridden. */
-// tslint:disable-next-line naming-convention
+// eslint-disable-next-line  
 export interface McAutocompleteDefaultOptions {
     /** Whether the first option should be highlighted when an autocomplete panel is opened. */
     autoActiveFirstOption?: boolean;
@@ -44,7 +44,7 @@ export const MC_AUTOCOMPLETE_DEFAULT_OPTIONS =
         factory: MC_AUTOCOMPLETE_DEFAULT_OPTIONS_FACTORY
     });
 
-// tslint:disable-next-line naming-convention
+// eslint-disable-next-line  
 export function MC_AUTOCOMPLETE_DEFAULT_OPTIONS_FACTORY(): McAutocompleteDefaultOptions {
     return { autoActiveFirstOption: true };
 }

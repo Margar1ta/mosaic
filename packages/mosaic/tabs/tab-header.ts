@@ -198,7 +198,7 @@ export class McTabHeader extends McTabHeaderBase
     }
 
     handleKeydown(event: KeyboardEvent) {
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         switch (event.keyCode) {
             case HOME:
                 this.keyManager.setFirstItemActive();

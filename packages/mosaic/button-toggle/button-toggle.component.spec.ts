@@ -138,7 +138,7 @@ describe('McButtonToggle with forms', () => {
                 expect(groupNgModel.pristine).toBe(true);
                 expect(groupNgModel.touched).toBe(false);
 
-                // tslint:disable-next-line:no-magic-numbers
+                // eslint-disable-next-line no-magic-numbers
                 innerButtons[2].click();
                 fixture.detectChanges();
                 tick();
@@ -308,7 +308,7 @@ describe('McButtonToggle without forms', () => {
             tick();
 
             // Always emit change event when button toggle is clicked
-            // tslint:disable-next-line:no-magic-numbers
+            // eslint-disable-next-line no-magic-numbers
             expect(changeSpy).toHaveBeenCalledTimes(2);
         }));
 
@@ -326,7 +326,7 @@ describe('McButtonToggle without forms', () => {
             buttonToggleLabelElements[1].click();
             fixture.detectChanges();
             tick();
-            // tslint:disable-next-line:no-magic-numbers
+            // eslint-disable-next-line no-magic-numbers
             expect(changeSpy).toHaveBeenCalledTimes(2);
         }));
 
@@ -521,7 +521,7 @@ describe('McButtonToggle without forms', () => {
             // The default browser behavior is to emit an event, when the value was set
             // to false. That's because the current input type is set to `checkbox` when
             // using the multiple mode.
-            // tslint:disable-next-line:no-magic-numbers
+            // eslint-disable-next-line no-magic-numbers
             expect(changeSpy).toHaveBeenCalledTimes(2);
         }));
 
@@ -580,7 +580,7 @@ describe('McButtonToggle without forms', () => {
 
             // The default browser behavior is to emit an event, when the value was set
             // to false. That's because the current input type is set to `checkbox`.
-            // tslint:disable-next-line:no-magic-numbers
+            // eslint-disable-next-line no-magic-numbers
             expect(changeSpy).toHaveBeenCalledTimes(2);
         }));
     });
@@ -606,7 +606,7 @@ describe('McButtonToggle without forms', () => {
         fixture.detectChanges();
 
         expect(fixture.componentInstance.toggleGroup.value).toBe('Seven');
-        // tslint:disable-next-line:no-magic-numbers
+        // eslint-disable-next-line no-magic-numbers
         expect(fixture.componentInstance.toggles.toArray()[2].checked).toBe(true);
     });
 
@@ -616,7 +616,7 @@ describe('McButtonToggle without forms', () => {
 
         expect(fixture.componentInstance.toggles.toArray()[0].checked).toBe(true);
         expect(fixture.componentInstance.toggles.toArray()[1].checked).toBe(false);
-        // tslint:disable-next-line:no-magic-numbers
+        // eslint-disable-next-line no-magic-numbers
         expect(fixture.componentInstance.toggles.toArray()[2].checked).toBe(false);
 
         fixture.componentInstance.value = [0, false];
@@ -624,7 +624,7 @@ describe('McButtonToggle without forms', () => {
 
         expect(fixture.componentInstance.toggles.toArray()[0].checked).toBe(true);
         expect(fixture.componentInstance.toggles.toArray()[1].checked).toBe(false);
-        // tslint:disable-next-line:no-magic-numbers
+        // eslint-disable-next-line no-magic-numbers
         expect(fixture.componentInstance.toggles.toArray()[2].checked).toBe(true);
     });
 });

@@ -13,7 +13,7 @@ import { McIconModule } from '@ptsecurity/mosaic/icon';
 import { MC_SIDEPANEL_DATA, McSidepanelPosition, McSidepanelService, McSidepanelModule } from '@ptsecurity/mosaic/sidepanel';
 
 
-// tslint:disable:no-console
+/* eslint-disable no-console */
 @Component({
     selector: 'app',
     templateUrl: './template.html',
@@ -23,7 +23,7 @@ import { MC_SIDEPANEL_DATA, McSidepanelPosition, McSidepanelService, McSidepanel
 export class SidepanelDemoComponent {
     @ViewChild(TemplateRef, {static: false}) template: TemplateRef<any>;
 
-    array = new Array(40); // tslint:disable-line
+    array = new Array(40); // eslint-disable-line
 
     constructor(private sidepanelService: McSidepanelService) {}
 
@@ -74,7 +74,7 @@ export class SidepanelDemoComponent {
 export class ExampleSidepanelComponent {
     openComponentSidepanel: () => void;
 
-    array = new Array(60); // tslint:disable-line
+    array = new Array(60); // eslint-disable-line
 
     constructor(@Inject(MC_SIDEPANEL_DATA) public data: any) {
         this.openComponentSidepanel = data.openComponentSidepanel;

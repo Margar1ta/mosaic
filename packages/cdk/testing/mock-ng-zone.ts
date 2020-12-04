@@ -17,12 +17,12 @@ export class MockNgZone extends NgZone {
     }
 
     run(fn: () => void): any {
-        // tslint:disable-next-line
+        // eslint-disable-next-line
         return fn();
     }
 
     runOutsideAngular(fn: () => void): any {
-        // tslint:disable-next-line
+        // eslint-disable-next-line
         return fn();
     }
 

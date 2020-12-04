@@ -55,7 +55,7 @@ export class SidepanelComponentExample {
 export class SidepanelExampleCustomComponent {
     openComponentSidepanel: () => void;
 
-    array = new Array(60); // tslint:disable-line
+    array = new Array(60); // eslint-disable-line
 
     constructor(@Inject(MC_SIDEPANEL_DATA) public data: any) {
         this.openComponentSidepanel = data.openComponentSidepanel;

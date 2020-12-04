@@ -1,4 +1,4 @@
-// tslint:disable:no-magic-numbers
+/* eslint-disable no-magic-numbers */
 import { Directionality } from '@angular/cdk/bidi';
 import {
     AfterContentInit,
@@ -193,7 +193,7 @@ export class McMonthView<D> implements AfterContentInit {
         const oldActiveDate = this._activeDate;
         const isRtl = this.isRtl();
 
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         switch (event.keyCode) {
             case LEFT_ARROW:
                 this.activeDate = this.dateAdapter.addCalendarDays(this._activeDate, isRtl ? 1 : -1);

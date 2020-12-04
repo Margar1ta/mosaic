@@ -14,11 +14,11 @@ import { CanColorCtor, mixinColor } from '@ptsecurity/mosaic/core';
 
 
 export class McCardBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McCardBaseMixin: CanColorCtor & typeof McCardBase = mixinColor(McCardBase);
 
 
@@ -82,7 +82,7 @@ export class McCard extends McCardBaseMixin implements OnDestroy {
     }
 
     onKeyDown($event: KeyboardEvent) {
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         switch ($event.keyCode) {
             case SPACE:
                 if (!this.readonly) {

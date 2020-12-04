@@ -1,5 +1,5 @@
-// tslint:disable:no-magic-numbers
-// tslint:disable:no-empty
+/* eslint-disable no-magic-numbers */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';

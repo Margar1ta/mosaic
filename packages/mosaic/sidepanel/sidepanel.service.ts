@@ -103,11 +103,11 @@ export class McSidepanelService implements OnDestroy {
     private attachContainer(overlayRef: OverlayRef, config: McSidepanelConfig): McSidepanelContainerComponent {
         const openedSidepanelsWithSamePosition = this.getOpenedSidepanelsWithSamePosition(config);
 
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         const injector = new PortalInjector(this.injector, new WeakMap<any>([
             [McSidepanelConfig, config],
             [MC_SIDEPANEL_WITH_INDENT, openedSidepanelsWithSamePosition.length >= 1],
-            [MC_SIDEPANEL_WITH_SHADOW, openedSidepanelsWithSamePosition.length < 2] // tslint:disable-line
+            [MC_SIDEPANEL_WITH_SHADOW, openedSidepanelsWithSamePosition.length < 2] // eslint-disable-line
         ]));
 
         const containerPortal = new ComponentPortal(McSidepanelContainerComponent, undefined, injector);
@@ -127,7 +127,7 @@ export class McSidepanelService implements OnDestroy {
     private createInjector<T>(
         config: McSidepanelConfig,
         sidepanelRef: McSidepanelRef<T>,
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         sidepanelContainer: McSidepanelContainerComponent): PortalInjector {
 
         // The McSidepanelContainerComponent is injected in the portal as the McSidepanelContainerComponent and
@@ -140,7 +140,7 @@ export class McSidepanelService implements OnDestroy {
             [McSidepanelRef, sidepanelRef]
         ]);
 
-        // tslint:disable-next-line:deprecation
+        // eslint-disable-next-line import/no-deprecated
         return new PortalInjector(this.injector, injectionTokens);
     }
 

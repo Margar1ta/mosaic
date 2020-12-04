@@ -1,4 +1,4 @@
-/* tslint:disable:no-import-side-effect ordered-imports */
+/* eslint-disable import/no-unassigned-import, import/order */
 // THIS ORDER OF IMPORTS AND CALLS IS IMPORTANT
 
 import './tasks/lint';

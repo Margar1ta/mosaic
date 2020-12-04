@@ -8,7 +8,7 @@ import { dispatchKeyboardEvent } from '@ptsecurity/cdk/testing';
 import { MC_SIDEPANEL_DATA, McSidepanelModule, McSidepanelPosition, McSidepanelRef, McSidepanelService } from './index';
 
 
-// tslint:disable:no-magic-numbers
+/* eslint-disable no-magic-numbers */
 describe('McSidepanelService', () => {
     let sidepanelService: McSidepanelService;
     let overlayContainer: OverlayContainer;

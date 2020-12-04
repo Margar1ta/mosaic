@@ -1,12 +1,12 @@
-/* tslint:disable:no-magic-numbers */
-/* tslint:disable:mocha-no-side-effect-code */
-/* tslint:disable:no-non-null-assertion */
-/* tslint:disable:no-empty */
-/* tslint:disable:no-unbound-method */
-/* tslint:disable:prefer-for-of */
+/* eslint-disable no-magic-numbers */
+/* eslint-disable  */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable no-empty,@typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/unbound-method */
+/* eslint-disable @typescript-eslint/prefer-for-of */
 
 // TODO: fix linter
-// tslint:disable
+/* eslint-disable */
 import { Directionality } from '@angular/cdk/bidi';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Platform } from '@angular/cdk/platform';
@@ -1623,7 +1623,7 @@ describe('McSelect', () => {
                 dispatchFakeEvent(selectElement, 'focus');
                 fixture.detectChanges();
 
-                /* tslint:disable-next-line:deprecation */
+                /* eslint-disable-next-line import/no-deprecated */
                 expect(selectInstance.focused).toBe(true, 'Expected select to be focused.');
 
                 selectInstance.open();
@@ -1632,7 +1632,7 @@ describe('McSelect', () => {
                 dispatchFakeEvent(selectElement, 'blur');
                 fixture.detectChanges();
 
-                /* tslint:disable-next-line:deprecation */
+                /* eslint-disable-next-line import/no-deprecated */
                 expect(selectInstance.focused).toBe(true, 'Expected select element to remain focused.');
             }));
         });
@@ -1898,7 +1898,7 @@ describe('McSelect', () => {
 
                     expect(spy).toHaveBeenCalledWith(jasmine.any(McOptionSelectionChange));
 
-                    /* tslint:disable-next-line:no-unnecessary-type-assertion */
+                    /* eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion */
                     subscription!.unsubscribe();
                 }));
             });

@@ -21,7 +21,7 @@ import { MC_DROPDOWN_PANEL, McDropdownPanel } from './dropdown-panel';
 // Boilerplate for applying mixins to McDropdownItem.
 /** @docs-private */
 export class McDropdownItemBase {}
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McDropdownItemMixinBase:
     HasTabIndexCtor & CanDisableCtor & typeof McDropdownItemBase = mixinTabIndex(mixinDisabled(McDropdownItemBase));
 
@@ -129,7 +129,7 @@ export class McDropdownItem extends McDropdownItemMixinBase implements IFocusabl
     /** Gets the label to be used when determining whether the option should be focused. */
     getLabel(): string {
         const element: HTMLElement = this.content.nativeElement;
-        // tslint:disable-next-line:no-magic-numbers
+        // eslint-disable-next-line no-magic-numbers
         const textNodeType = this.document ? this.document.TEXT_NODE : 3;
         let output = '';
 

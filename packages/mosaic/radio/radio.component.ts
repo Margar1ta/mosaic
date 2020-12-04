@@ -50,10 +50,10 @@ export class McRadioChange {
 // Boilerplate for applying mixins to McRadioGroup.
 /** @docs-private */
 export class McRadioGroupBase {
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McRadioGroupMixinBase: CanDisableCtor & typeof McRadioGroupBase = mixinDisabled(McRadioGroupBase);
 
 /**
@@ -177,14 +177,14 @@ export class McRadioGroup extends McRadioGroupMixinBase
     }
 
     /** The method to be called in order to update ngModel */
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     controlValueAccessorChangeFn: (value: any) => void = () => {};
 
     /**
      * onTouch function registered via registerOnTouch (ControlValueAccessor).
      * @docs-private
      */
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     onTouched: () => any = () => {};
 
     checkSelectedRadioButton() {
@@ -290,18 +290,18 @@ export class McRadioGroup extends McRadioGroupMixinBase
 
 // Boilerplate for applying mixins to McRadioButton.
 /** @docs-private */
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 abstract class McRadioButtonBase {
     // Since the disabled property is manually defined for the McRadioButton and isn't set up in
     // the mixin base class. To be able to use the tabindex mixin, a disabled property must be
     // defined to properly work.
     abstract disabled: boolean;
 
-    // tslint:disable-next-line:naming-convention
+    // eslint-disable-next-line 
     constructor(public _elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const McRadioButtonMixinBase:
     CanColorCtor & HasTabIndexCtor & typeof McRadioButtonBase = mixinColor(mixinTabIndex(McRadioButtonBase));
 
@@ -436,7 +436,7 @@ export class McRadioButton extends McRadioButtonMixinBase
 
     private _labelPosition: 'before' | 'after';
 
-    /* tslint:disable:member-ordering */
+    /* eslint-disable @typescript-eslint/member-ordering */
     private readonly uniqueId: string = `mc-radio-${++nextUniqueId}`;
 
     /** Whether this radio is checked. */
@@ -543,7 +543,7 @@ export class McRadioButton extends McRadioButtonMixinBase
     }
 
     /** Unregister function for _radioDispatcher */
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     private readonly removeUniqueSelectionListener: () => void = () => {};
 
     /** Dispatch change event with current value. */

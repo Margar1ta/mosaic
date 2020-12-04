@@ -19,7 +19,7 @@ export class McLinkBase {
     constructor(public elementRef: ElementRef) {}
 }
 
-// tslint:disable-next-line: naming-convention
+// eslint-disable-next-line 
 export const McLinkMixinBase: HasTabIndexCtor & CanDisableCtor &
     typeof McLinkBase = mixinTabIndex(mixinDisabled(McLinkBase));
 

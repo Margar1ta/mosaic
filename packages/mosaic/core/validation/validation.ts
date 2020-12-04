@@ -10,7 +10,7 @@ import {
 } from '@angular/forms';
 
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line
 export interface McValidationOptions {
     useValidation: boolean;
 }
@@ -18,7 +18,7 @@ export interface McValidationOptions {
 export const MC_VALIDATION = new InjectionToken<McValidationOptions>(
     'McUseValidation',
     { factory: () => ({ useValidation: true }) }
-    );
+);
 
 
 function setValidState(control: AbstractControl, validator: ValidatorFn): void {
@@ -44,7 +44,7 @@ export function setMosaicValidation(component) {
 
     if (parentForm) {
         parentForm.ngSubmit.subscribe(() => {
-            // tslint:disable-next-line: no-unnecessary-type-assertion
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
             ngControl.control!.updateValueAndValidity({ emitEvent: false });
         });
     }
@@ -59,7 +59,7 @@ export function setMosaicValidationForModelControl(component, validators: Valida
     if (!validators) { return; }
 
     validators.forEach((validator: Validator) => {
-        // tslint:disable-next-line: no-unbound-method
+        // eslint-disable-next-line @typescript-eslint/unbound-method
         const originalValidate = validator.validate;
 
         if (validator instanceof RequiredValidator) {

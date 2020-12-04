@@ -45,7 +45,7 @@ import { distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
 export type ArrowPlacements = HorizontalConnectionPos | VerticalConnectionPos;
 
-// tslint:disable-next-line:naming-convention
+// eslint-disable-next-line 
 export const ArrowPlacements = {
     Top: 'top' as ArrowPlacements,
     Center: 'center' as ArrowPlacements,
@@ -568,7 +568,7 @@ export class McTooltip implements OnInit, OnDestroy {
         }
     }
 
-    // tslint:disable-next-line:no-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     updateCompValue(key: string, value: any): void {
         if (this.isDynamicTooltip && value && this.tooltip) {
             this.tooltip[key] = value;
@@ -577,7 +577,7 @@ export class McTooltip implements OnInit, OnDestroy {
     }
 
     handleKeydown(e: KeyboardEvent) {
-        if (this.isTooltipOpen && e.keyCode === ESCAPE) { // tslint:disable-line
+        if (this.isTooltipOpen && e.keyCode === ESCAPE) { // eslint-disable-line
             this.hide();
         }
     }
